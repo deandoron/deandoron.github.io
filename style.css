@@ -134,6 +134,11 @@ a:hover {color:#B1040E;}
 	font-style: italic;
 	color:#e67a18;
 }
+.col-remark {
+	text-align: justify;
+	font-style: italic;
+	color:#a2a19f;
+}
 .paper-venue {
 	font-style: italic;
 }
