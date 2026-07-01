@@ -169,6 +169,7 @@ button {
 }
 
 .room-tab {
+  position: relative;
   width: 100%;
   min-height: 48px;
   border: 1px solid transparent;
@@ -181,10 +182,38 @@ button {
   gap: 8px;
   padding: 10px 12px;
   text-align: start;
+  cursor: grab;
+}
+
+.room-tab:active {
+  cursor: grabbing;
 }
 
 .room-tab:hover {
   background: #f0ece2;
+}
+
+.room-tab.is-dragging {
+  opacity: 0.42;
+}
+
+.room-tab.is-drop-before::before,
+.room-tab.is-drop-after::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--teal);
+}
+
+.room-tab.is-drop-before::before {
+  top: -6px;
+}
+
+.room-tab.is-drop-after::after {
+  bottom: -6px;
 }
 
 .room-tab[aria-selected="true"] {
@@ -639,6 +668,24 @@ button {
 
   .room-tab {
     width: 190px;
+  }
+
+  .room-tab.is-drop-before::before,
+  .room-tab.is-drop-after::after {
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    height: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .room-tab.is-drop-before::before {
+    left: -6px;
+  }
+
+  .room-tab.is-drop-after::after {
+    right: -6px;
   }
 
   .images-section {

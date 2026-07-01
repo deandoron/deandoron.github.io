@@ -27,6 +27,8 @@ let db;
 let state;
 let saveStateTimer;
 let dropStatusTimer;
+let draggedRoomId = "";
+let suppressNextTabClick = false;
 const imageRecords = new Map();
 
 boot();
@@ -567,16 +569,104 @@ function renderTabs() {
     name.textContent = room.name || "Untitled room";
     count.textContent = room.imageIds.length.toString();
     tab.id = `tab-${room.id}`;
+    tab.draggable = true;
     tab.setAttribute("aria-selected", room.id === state.activeRoomId ? "true" : "false");
     tab.addEventListener("click", () => {
+      if (suppressNextTabClick) {
+        suppressNextTabClick = false;
+        return;
+      }
       state.activeRoomId = room.id;
       state.activeImageId = room.imageIds[0] || null;
       queueStateSave();
       render();
     });
+    tab.addEventListener("dragstart", (event) => {
+      draggedRoomId = room.id;
+      suppressNextTabClick = true;
+      event.dataTransfer.effectAllowed = "move";
+      event.dataTransfer.setData("text/plain", room.id);
+      event.dataTransfer.setData("application/x-apartment-room-id", room.id);
+      tab.classList.add("is-dragging");
+    });
+    tab.addEventListener("dragover", (event) => {
+      if (!draggedRoomId || draggedRoomId === room.id) return;
+      event.preventDefault();
+      event.dataTransfer.dropEffect = "move";
+      setRoomTabDropIndicator(tab, getRoomTabDropPlacement(tab, event));
+    });
+    tab.addEventListener("dragleave", () => {
+      clearRoomTabDropIndicator(tab);
+    });
+    tab.addEventListener("drop", (event) => {
+      if (!draggedRoomId) return;
+      const droppedRoomId =
+        event.dataTransfer.getData("application/x-apartment-room-id") ||
+        event.dataTransfer.getData("text/plain") ||
+        draggedRoomId;
+      if (!droppedRoomId || droppedRoomId === room.id) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+      reorderRooms(droppedRoomId, room.id, getRoomTabDropPlacement(tab, event));
+      clearAllRoomTabDragStates();
+      finishRoomTabDrag();
+    });
+    tab.addEventListener("dragend", () => {
+      clearAllRoomTabDragStates();
+      finishRoomTabDrag();
+    });
 
     roomTabs.append(tab);
   }
+}
+
+function getRoomTabDropPlacement(tab, event) {
+  const rect = tab.getBoundingClientRect();
+  const isHorizontal = getComputedStyle(roomTabs).flexDirection.startsWith("row");
+  const midpoint = isHorizontal ? rect.left + rect.width / 2 : rect.top + rect.height / 2;
+  const pointer = isHorizontal ? event.clientX : event.clientY;
+  return pointer > midpoint ? "after" : "before";
+}
+
+function setRoomTabDropIndicator(tab, placement) {
+  for (const candidate of roomTabs.querySelectorAll(".room-tab")) {
+    if (candidate !== tab) clearRoomTabDropIndicator(candidate);
+  }
+  tab.classList.toggle("is-drop-before", placement === "before");
+  tab.classList.toggle("is-drop-after", placement === "after");
+}
+
+function clearRoomTabDropIndicator(tab) {
+  tab.classList.remove("is-drop-before", "is-drop-after");
+}
+
+function clearAllRoomTabDragStates() {
+  for (const tab of roomTabs.querySelectorAll(".room-tab")) {
+    tab.classList.remove("is-dragging", "is-drop-before", "is-drop-after");
+  }
+}
+
+function finishRoomTabDrag() {
+  window.setTimeout(() => {
+    draggedRoomId = "";
+    suppressNextTabClick = false;
+  }, 0);
+}
+
+function reorderRooms(draggedRoomId, targetRoomId, placement) {
+  const fromIndex = state.rooms.findIndex((room) => room.id === draggedRoomId);
+  const targetIndex = state.rooms.findIndex((room) => room.id === targetRoomId);
+  if (fromIndex < 0 || targetIndex < 0 || fromIndex === targetIndex) return;
+
+  const [room] = state.rooms.splice(fromIndex, 1);
+  let insertIndex = targetIndex;
+  if (fromIndex < targetIndex) insertIndex -= 1;
+  if (placement === "after") insertIndex += 1;
+
+  state.rooms.splice(Math.max(0, Math.min(insertIndex, state.rooms.length)), 0, room);
+  queueStateSave();
+  renderTabs();
 }
 
 function renderRoom() {
