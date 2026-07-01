@@ -428,12 +428,15 @@ button {
   overflow: hidden;
   border-radius: 6px;
   background: #eee9df;
-  display: block;
+  display: grid;
+  place-items: center;
 }
 
 .thumb-image-wrap img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   display: block;
   object-fit: contain;
 }
@@ -518,12 +521,15 @@ button {
   height: 100%;
   display: grid;
   place-items: center;
+  overflow: hidden;
   cursor: zoom-in;
 }
 
 .detail-image-wrap img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
 }
