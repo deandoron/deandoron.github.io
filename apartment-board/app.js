@@ -87,6 +87,11 @@ async function init() {
 function wireEvents() {
   addRoomBtn.addEventListener("click", addRoom);
   deleteRoomBtn.addEventListener("click", deleteActiveRoom);
+  roomTabs.addEventListener("dragover", handleRoomTabsDragOver);
+  roomTabs.addEventListener("drop", handleRoomTabsDrop);
+  roomTabs.addEventListener("dragleave", (event) => {
+    if (!roomTabs.contains(event.relatedTarget)) clearAllRoomTabDragStates();
+  });
 
   roomNameInput.addEventListener("input", () => {
     const room = getActiveRoom();
@@ -569,6 +574,7 @@ function renderTabs() {
     name.textContent = room.name || "Untitled room";
     count.textContent = room.imageIds.length.toString();
     tab.id = `tab-${room.id}`;
+    tab.dataset.roomId = room.id;
     tab.draggable = true;
     tab.setAttribute("aria-selected", room.id === state.activeRoomId ? "true" : "false");
     tab.addEventListener("click", () => {
@@ -589,29 +595,6 @@ function renderTabs() {
       event.dataTransfer.setData("application/x-apartment-room-id", room.id);
       tab.classList.add("is-dragging");
     });
-    tab.addEventListener("dragover", (event) => {
-      if (!draggedRoomId || draggedRoomId === room.id) return;
-      event.preventDefault();
-      event.dataTransfer.dropEffect = "move";
-      setRoomTabDropIndicator(tab, getRoomTabDropPlacement(tab, event));
-    });
-    tab.addEventListener("dragleave", () => {
-      clearRoomTabDropIndicator(tab);
-    });
-    tab.addEventListener("drop", (event) => {
-      if (!draggedRoomId) return;
-      const droppedRoomId =
-        event.dataTransfer.getData("application/x-apartment-room-id") ||
-        event.dataTransfer.getData("text/plain") ||
-        draggedRoomId;
-      if (!droppedRoomId || droppedRoomId === room.id) return;
-
-      event.preventDefault();
-      event.stopPropagation();
-      reorderRooms(droppedRoomId, room.id, getRoomTabDropPlacement(tab, event));
-      clearAllRoomTabDragStates();
-      finishRoomTabDrag();
-    });
     tab.addEventListener("dragend", () => {
       clearAllRoomTabDragStates();
       finishRoomTabDrag();
@@ -621,12 +604,53 @@ function renderTabs() {
   }
 }
 
-function getRoomTabDropPlacement(tab, event) {
-  const rect = tab.getBoundingClientRect();
+function handleRoomTabsDragOver(event) {
+  if (!draggedRoomId) return;
+
+  const dropTarget = getRoomTabDropTarget(event);
+  if (!dropTarget) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+  event.dataTransfer.dropEffect = "move";
+  setRoomTabDropIndicator(dropTarget.tab, dropTarget.placement);
+}
+
+function handleRoomTabsDrop(event) {
+  if (!draggedRoomId) return;
+
+  const dropTarget = getRoomTabDropTarget(event);
+  if (!dropTarget) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+  const droppedRoomId =
+    event.dataTransfer.getData("application/x-apartment-room-id") ||
+    event.dataTransfer.getData("text/plain") ||
+    draggedRoomId;
+  reorderRooms(droppedRoomId, dropTarget.tab.dataset.roomId, dropTarget.placement);
+  clearAllRoomTabDragStates();
+  finishRoomTabDrag();
+}
+
+function getRoomTabDropTarget(event) {
+  const tabs = Array.from(roomTabs.querySelectorAll(".room-tab:not(.is-dragging)"));
+  if (!tabs.length) return null;
+
   const isHorizontal = getComputedStyle(roomTabs).flexDirection.startsWith("row");
-  const midpoint = isHorizontal ? rect.left + rect.width / 2 : rect.top + rect.height / 2;
   const pointer = isHorizontal ? event.clientX : event.clientY;
-  return pointer > midpoint ? "after" : "before";
+  let lastTab = tabs[0];
+
+  for (const tab of tabs) {
+    const rect = tab.getBoundingClientRect();
+    const start = isHorizontal ? rect.left : rect.top;
+    const end = isHorizontal ? rect.right : rect.bottom;
+    const midpoint = start + (end - start) / 2;
+    if (pointer < midpoint) return { tab, placement: "before" };
+    lastTab = tab;
+  }
+
+  return { tab: lastTab, placement: "after" };
 }
 
 function setRoomTabDropIndicator(tab, placement) {
