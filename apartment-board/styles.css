@@ -435,7 +435,7 @@ button {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .thumb-caption {
@@ -513,6 +513,14 @@ button {
   overflow: hidden;
 }
 
+.detail-image-link {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  cursor: zoom-in;
+}
+
 .detail-image-wrap img {
   width: 100%;
   height: 100%;
@@ -541,8 +549,28 @@ button {
   gap: 8px;
 }
 
+.note-input-wrap {
+  position: relative;
+  display: block;
+}
+
 .image-note-input {
   min-height: 44px;
+}
+
+.note-placeholder {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  direction: ltr;
+  pointer-events: none;
+}
+
+.image-note-input:focus + .note-placeholder,
+.image-note-input:not(:placeholder-shown) + .note-placeholder {
+  display: none;
 }
 
 .tag-editor {

@@ -642,11 +642,20 @@ function renderDetail() {
   const imageWrap = document.createElement("div");
   imageWrap.className = "detail-image-wrap";
 
+  const imageLink = document.createElement("a");
+  imageLink.className = "detail-image-link";
+  imageLink.href = image.url;
+  imageLink.target = "_blank";
+  imageLink.rel = "noopener noreferrer";
+  imageLink.referrerPolicy = "no-referrer";
+  imageLink.setAttribute("aria-label", "Open image full size");
+
   const img = document.createElement("img");
   img.src = image.url;
   img.referrerPolicy = "no-referrer";
   img.alt = image.note || "Apartment inspiration image";
-  imageWrap.append(img);
+  imageLink.append(img);
+  imageWrap.append(imageLink);
 
   const body = document.createElement("div");
   body.className = "detail-body";
@@ -669,14 +678,22 @@ function renderDetail() {
   noteInput.type = "text";
   noteInput.dir = "rtl";
   noteInput.value = image.note || "";
-  noteInput.placeholder = "What did you like?";
+  noteInput.placeholder = " ";
   noteInput.addEventListener("input", () => {
     image.note = noteInput.value;
     saveImageMeta(image);
     renderThumbs();
   });
 
-  noteField.append(noteLabel, noteInput);
+  const noteInputWrap = document.createElement("span");
+  noteInputWrap.className = "note-input-wrap";
+
+  const notePlaceholder = document.createElement("span");
+  notePlaceholder.className = "note-placeholder";
+  notePlaceholder.textContent = "What did you like?";
+
+  noteInputWrap.append(noteInput, notePlaceholder);
+  noteField.append(noteLabel, noteInputWrap);
 
   const tagEditor = document.createElement("div");
   tagEditor.className = "tag-editor";
