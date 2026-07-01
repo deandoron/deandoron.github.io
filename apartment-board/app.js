@@ -176,14 +176,25 @@ async function addDroppedData(dataTransfer) {
   }
 
   setDropStatus("Importing dragged image...");
-  const urlFiles = await getImageFilesFromUrls(urls);
-  if (!urlFiles.length) {
-    setDropStatus("Could not import that image. Save it first, then drag the file here.");
+  const { files: urlFiles, importedUrls } = await getImageFilesFromUrls(urls);
+  let addedCount = 0;
+
+  if (urlFiles.length) {
+    addedCount += await addFiles(urlFiles);
+  }
+
+  const linkedUrls = urls.filter((url) => !importedUrls.has(url));
+  if (linkedUrls.length) {
+    addedCount += await addRemoteImages(linkedUrls);
+  }
+
+  if (!addedCount) {
+    setDropStatus("Could not import that image. Try Add images instead.");
     return;
   }
 
-  const addedCount = await addFiles(urlFiles);
-  setDropStatus(`Added ${addedCount} image${addedCount === 1 ? "" : "s"}.`, true);
+  const suffix = linkedUrls.length ? " Linked images need internet access to display." : "";
+  setDropStatus(`Added ${addedCount} image${addedCount === 1 ? "" : "s"}.${suffix}`, true);
 }
 
 function getDroppedImageFiles(dataTransfer) {
@@ -197,30 +208,38 @@ function getDroppedImageFiles(dataTransfer) {
 }
 
 function getDroppedImageUrls(dataTransfer) {
-  const urls = [];
+  const imageUrls = [];
+  const candidateUrls = [];
+  const downloadUrl = dataTransfer.getData("DownloadURL");
   const uriList = dataTransfer.getData("text/uri-list");
   const plainText = dataTransfer.getData("text/plain");
   const html = dataTransfer.getData("text/html");
 
+  const chromeDownloadUrl = parseChromeDownloadUrl(downloadUrl);
+  if (chromeDownloadUrl) imageUrls.push(chromeDownloadUrl);
+
   for (const line of uriList.split(/\r?\n/)) {
     const value = line.trim();
-    if (value && !value.startsWith("#")) urls.push(value);
+    if (value && !value.startsWith("#")) candidateUrls.push(value);
   }
 
-  if (plainText.trim()) urls.push(plainText.trim());
+  if (plainText.trim()) candidateUrls.push(plainText.trim());
 
   if (html.trim()) {
     const doc = new DOMParser().parseFromString(html, "text/html");
     for (const img of doc.querySelectorAll("img[src]")) {
-      urls.push(img.getAttribute("src"));
+      imageUrls.push(img.getAttribute("src"));
     }
     for (const link of doc.querySelectorAll("a[href]")) {
-      urls.push(link.getAttribute("href"));
+      candidateUrls.push(link.getAttribute("href"));
     }
   }
 
   return mergeUnique(
-    urls
+    [
+      ...imageUrls,
+      ...candidateUrls.filter(looksLikeImageUrl),
+    ]
       .filter(Boolean)
       .map((url) => url.trim())
       .filter((url) => url.startsWith("data:image/") || /^https?:\/\//i.test(url))
@@ -229,6 +248,7 @@ function getDroppedImageUrls(dataTransfer) {
 
 async function getImageFilesFromUrls(urls) {
   const files = [];
+  const importedUrls = new Set();
   for (const url of urls) {
     try {
       const response = await fetch(url);
@@ -238,11 +258,23 @@ async function getImageFilesFromUrls(urls) {
       if (!type.startsWith("image/")) continue;
       const name = getFileNameFromUrl(url);
       files.push(new File([blob], name, { type }));
+      importedUrls.add(url);
     } catch {
-      // Some sites block cross-origin reads. In that case the user needs to save the image first.
+      // Some sites block cross-origin reads. Those are saved as linked images instead.
     }
   }
-  return files;
+  return { files, importedUrls };
+}
+
+function parseChromeDownloadUrl(value) {
+  const match = value.match(/^[^:]+:[^:]*:(.+)$/);
+  return match?.[1] || "";
+}
+
+function looksLikeImageUrl(url) {
+  if (url.startsWith("data:image/")) return true;
+  const cleanUrl = url.split(/[?#]/)[0].toLowerCase();
+  return /\.(avif|bmp|gif|heic|heif|jpe?g|png|svg|webp)$/.test(cleanUrl);
 }
 
 function mergeUniqueFiles(files) {
@@ -322,12 +354,13 @@ async function loadInitialState() {
 
   imageRecords.clear();
   for (const image of savedImages) {
-    if (!image.blob) continue;
+    if (!image.blob && !image.remoteUrl) continue;
     imageRecords.set(image.id, {
       ...image,
       tags: Array.isArray(image.tags) ? image.tags : [],
       note: image.note || "",
-      url: URL.createObjectURL(image.blob),
+      remoteUrl: image.remoteUrl || "",
+      url: image.blob ? URL.createObjectURL(image.blob) : image.remoteUrl,
     });
   }
 
@@ -450,6 +483,7 @@ async function addFiles(fileList) {
       note: "",
       tags: [],
       blob: file,
+      remoteUrl: "",
       url: URL.createObjectURL(file),
     };
     imageRecords.set(image.id, image);
@@ -461,6 +495,38 @@ async function addFiles(fileList) {
   await saveState();
   render();
   return files.length;
+}
+
+async function addRemoteImages(urls) {
+  const room = getActiveRoom();
+  if (!room) return 0;
+
+  const imageUrls = mergeUnique(urls.filter(Boolean));
+  if (!imageUrls.length) return 0;
+
+  for (const remoteUrl of imageUrls) {
+    const image = {
+      id: makeId(),
+      roomId: room.id,
+      name: getFileNameFromUrl(remoteUrl),
+      type: inferImageType(remoteUrl) || "image/*",
+      size: 0,
+      createdAt: new Date().toISOString(),
+      note: "",
+      tags: [],
+      blob: null,
+      remoteUrl,
+      url: remoteUrl,
+    };
+    imageRecords.set(image.id, image);
+    room.imageIds.push(image.id);
+    await putInStore("images", imageForStorage(image));
+    state.activeImageId = image.id;
+  }
+
+  await saveState();
+  render();
+  return imageUrls.length;
 }
 
 async function deleteSelectedImage() {
@@ -477,7 +543,7 @@ async function deleteSelectedImage() {
 
 async function deleteImageRecord(imageId) {
   const image = imageRecords.get(imageId);
-  if (image?.url) URL.revokeObjectURL(image.url);
+  if (image?.blob && image.url) URL.revokeObjectURL(image.url);
   imageRecords.delete(imageId);
   await deleteFromStore("images", imageId);
 }
@@ -539,6 +605,7 @@ function renderThumbs() {
     const tags = thumb.querySelector(".thumb-tags");
 
     img.src = image.url;
+    img.referrerPolicy = "no-referrer";
     img.alt = image.note || "Apartment inspiration image";
     caption.textContent = image.note || "No note yet";
     thumb.setAttribute("aria-selected", image.id === state.activeImageId ? "true" : "false");
@@ -577,6 +644,7 @@ function renderDetail() {
 
   const img = document.createElement("img");
   img.src = image.url;
+  img.referrerPolicy = "no-referrer";
   img.alt = image.note || "Apartment inspiration image";
   imageWrap.append(img);
 
@@ -740,6 +808,7 @@ function imageForStorage(image) {
     note: image.note || "",
     tags: image.tags || [],
     blob: image.blob,
+    remoteUrl: image.remoteUrl || "",
   };
 }
 
