@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment Board</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="auth-locked">
+    <section class="auth-screen" id="authScreen" aria-labelledby="authTitle">
+      <form class="auth-card" id="authForm">
+        <h1 id="authTitle">Apartment Board</h1>
+        <label for="passwordInput">Password</label>
+        <input
+          id="passwordInput"
+          type="password"
+          autocomplete="current-password"
+          aria-describedby="authMessage"
+        />
+        <button class="primary-action" type="submit">Enter</button>
+        <p class="auth-message" id="authMessage" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Apartment Board</h1>
+        </div>
+        <div class="top-actions">
+          <button class="primary-action" id="addRoomBtn" type="button">Add room</button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <aside class="sidebar" aria-label="Rooms">
+          <div class="tabs" id="roomTabs" role="tablist" aria-label="Apartment parts"></div>
+        </aside>
+
+        <main class="room-panel" id="roomPanel">
+          <section class="room-head">
+            <input
+              id="roomNameInput"
+              class="room-name-input"
+              type="text"
+              dir="auto"
+              aria-label="Room name"
+              autocomplete="off"
+            />
+            <button class="ghost-button danger" id="deleteRoomBtn" type="button">Delete room</button>
+          </section>
+
+          <section class="notes-section" aria-labelledby="generalNotesLabel">
+            <label id="generalNotesLabel" for="roomNotes">General notes</label>
+            <textarea
+              id="roomNotes"
+              dir="auto"
+              rows="7"
+              spellcheck="true"
+              aria-label="General notes"
+            ></textarea>
+          </section>
+
+          <section class="images-section">
+            <div class="gallery-panel">
+              <div class="dropzone" id="dropZone" tabindex="0">
+                <input id="fileInput" type="file" accept="image/*" multiple hidden />
+                <button class="secondary-action" id="chooseFilesBtn" type="button">Add images</button>
+                <span>Drop images here</span>
+                <span class="status-line" id="dropStatus" aria-live="polite"></span>
+              </div>
+
+              <div class="thumb-grid" id="thumbGrid" aria-label="Images"></div>
+            </div>
+
+            <article class="detail-panel" id="detailPanel" aria-live="polite"></article>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <template id="roomTabTemplate">
+      <button class="room-tab" type="button" role="tab">
+        <span class="room-tab-name"></span>
+        <span class="room-tab-count"></span>
+      </button>
+    </template>
+
+    <template id="thumbTemplate">
+      <button class="thumb-card" type="button">
+        <span class="thumb-image-wrap">
+          <img alt="" />
+        </span>
+        <span class="thumb-caption" dir="auto"></span>
+        <span class="thumb-tags"></span>
+      </button>
+    </template>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
