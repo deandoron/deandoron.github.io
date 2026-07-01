@@ -599,7 +599,7 @@ function renderDetail() {
   const noteInput = document.createElement("input");
   noteInput.className = "image-note-input";
   noteInput.type = "text";
-  noteInput.dir = "auto";
+  noteInput.dir = "rtl";
   noteInput.value = image.note || "";
   noteInput.placeholder = "What did you like?";
   noteInput.addEventListener("input", () => {
@@ -643,7 +643,7 @@ function renderDetail() {
   const tagInput = document.createElement("input");
   tagInput.className = "tag-input";
   tagInput.type = "text";
-  tagInput.dir = "auto";
+  tagInput.dir = "rtl";
   tagInput.placeholder = "Add hashtag";
   tagInput.autocomplete = "off";
 
