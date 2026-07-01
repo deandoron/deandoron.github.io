@@ -715,13 +715,11 @@ function renderThumbs() {
 
     const thumb = thumbTemplate.content.firstElementChild.cloneNode(true);
     const img = thumb.querySelector("img");
-    const caption = thumb.querySelector(".thumb-caption");
     const tags = thumb.querySelector(".thumb-tags");
 
     img.src = image.url;
     img.referrerPolicy = "no-referrer";
     img.alt = image.note || "Apartment inspiration image";
-    caption.textContent = image.note || "No note yet";
     thumb.setAttribute("aria-selected", image.id === state.activeImageId ? "true" : "false");
     thumb.addEventListener("click", () => {
       state.activeImageId = image.id;
@@ -736,6 +734,7 @@ function renderThumbs() {
       chip.textContent = `#${tag}`;
       tags.append(chip);
     }
+    if (!image.tags.length) tags.remove();
 
     thumbGrid.append(thumb);
   }

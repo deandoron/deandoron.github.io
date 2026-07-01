@@ -468,26 +468,12 @@ button {
   object-position: center;
 }
 
-.thumb-caption {
-  min-height: 2.4em;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-height: 1.2;
-  font-size: 0.86rem;
-}
-
 .thumb-tags,
 .tag-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
-}
-
-.thumb-tags {
-  min-height: 22px;
 }
 
 .mini-tag,
