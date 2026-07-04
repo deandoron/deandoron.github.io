@@ -2,6 +2,8 @@ const DB_NAME = "apartment-board-db";
 const DB_VERSION = 1;
 const STATE_KEY = "main";
 const DEFAULT_TAGS = ["Dean", "Avital", "Both"];
+const SHARED_DATA_URL = "./shared-data.20260704.json";
+const SHARED_DATA_VERSION = "2026-07-04-current-chrome";
 const AUTH_SESSION_KEY = "apartment-board-unlocked";
 const PASSWORD_HASH = "a30bab50672952f8a8bbb133d63031da3074a79a713ac4a416e4aaaf63e3f0b3";
 
@@ -356,7 +358,14 @@ function openDatabase() {
 }
 
 async function loadInitialState() {
-  const savedState = await getFromStore("state", STATE_KEY);
+  const sharedSnapshot = await loadSharedSnapshot();
+  let savedState = await getFromStore("state", STATE_KEY);
+
+  if (shouldImportSharedSnapshot(sharedSnapshot, savedState)) {
+    await importSharedSnapshot(sharedSnapshot);
+    savedState = await getFromStore("state", STATE_KEY);
+  }
+
   const savedImages = await getAllFromStore("images");
 
   imageRecords.clear();
@@ -382,12 +391,79 @@ async function loadInitialState() {
       activeRoomId: kitchen.id,
       activeImageId: null,
       tags: [...DEFAULT_TAGS],
+      sharedVersion: sharedSnapshot?.version || "",
     };
     await saveState();
   }
 
   removeMissingImageRefs();
   ensureValidSelection();
+}
+
+async function loadSharedSnapshot() {
+  try {
+    const response = await fetch(SHARED_DATA_URL, { cache: "no-store" });
+    if (!response.ok) return null;
+    const snapshot = await response.json();
+    if (snapshot?.version !== SHARED_DATA_VERSION) return null;
+    return snapshot;
+  } catch {
+    return null;
+  }
+}
+
+function shouldImportSharedSnapshot(snapshot, savedState) {
+  return Boolean(snapshot && (!savedState || savedState.sharedVersion !== snapshot.version));
+}
+
+async function importSharedSnapshot(snapshot) {
+  const snapshotState = stateFromSharedSnapshot(snapshot);
+  const snapshotImages = Array.isArray(snapshot.images) ? snapshot.images : [];
+
+  await clearStore("images");
+
+  for (const image of snapshotImages) {
+    const remoteUrl = image.url || image.remoteUrl || "";
+    if (!image.id || !remoteUrl) continue;
+
+    await putInStore("images", {
+      id: image.id,
+      roomId: image.roomId || "",
+      name: image.name || "",
+      type: image.type || inferImageType(remoteUrl) || "image/*",
+      size: image.size || 0,
+      createdAt: image.createdAt || "",
+      note: image.note || "",
+      tags: Array.isArray(image.tags) ? image.tags : [],
+      blob: null,
+      remoteUrl,
+    });
+  }
+
+  await putInStore("state", snapshotState);
+}
+
+function stateFromSharedSnapshot(snapshot) {
+  const snapshotState = snapshot.state || {};
+  const rooms = Array.isArray(snapshotState.rooms)
+    ? snapshotState.rooms.map((room) => ({
+        id: room.id || makeId(),
+        name: room.name || "Untitled room",
+        notes: room.notes || "",
+        imageIds: Array.isArray(room.imageIds) ? room.imageIds : [],
+      }))
+    : [];
+
+  if (!rooms.length) rooms.push(createRoom("Kitchen"));
+
+  return {
+    id: STATE_KEY,
+    rooms,
+    activeRoomId: snapshotState.activeRoomId || rooms[0].id,
+    activeImageId: snapshotState.activeImageId || null,
+    tags: mergeUnique([...DEFAULT_TAGS, ...(Array.isArray(snapshotState.tags) ? snapshotState.tags : [])]),
+    sharedVersion: snapshot.version,
+  };
 }
 
 function normalizeState(savedState) {
@@ -409,6 +485,7 @@ function normalizeState(savedState) {
     activeRoomId: savedState.activeRoomId || normalizedRooms[0].id,
     activeImageId: savedState.activeImageId || null,
     tags: mergeUnique([...DEFAULT_TAGS, ...(Array.isArray(savedState.tags) ? savedState.tags : [])]),
+    sharedVersion: savedState.sharedVersion || "",
   };
 }
 
@@ -920,6 +997,7 @@ function saveState() {
     activeRoomId: state.activeRoomId,
     activeImageId: state.activeImageId,
     tags: state.tags,
+    sharedVersion: state.sharedVersion || "",
   });
 }
 
@@ -965,6 +1043,15 @@ function putInStore(storeName, value) {
     const transaction = db.transaction(storeName, "readwrite");
     const request = transaction.objectStore(storeName).put(value);
     request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+  });
+}
+
+function clearStore(storeName) {
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction(storeName, "readwrite");
+    const request = transaction.objectStore(storeName).clear();
+    request.onsuccess = () => resolve();
     request.onerror = () => reject(request.error);
   });
 }

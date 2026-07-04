@@ -1,0 +1,842 @@
+{
+  "id": "apartment-board-shared-snapshot",
+  "version": "2026-07-04-current-chrome",
+  "exportedAt": "2026-07-04T09:03:42.946Z",
+  "sourceLocation": "https://deandoron.github.io/apartment-board/",
+  "state": {
+    "id": "main",
+    "rooms": [
+      {
+        "id": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+        "name": "Kitchen",
+        "notes": "מקרר רחב ותנור גדול (לברר גדלים)\nטוחן אשפה\nמקרר יין אינטגרלי (יכול להיות גם בדרך לסלון אם חבוי כארון)\nמגירה עם אוורור ליבשים (בצל, תפוחי אדמה וכו׳)\nמגירה עם משטח הטענה\nבאיזור הנמוך מגירות ולא ארונות\nנישות למכשירים שעובדים איתם באופן סדיר\nחלק מהמגירות עם דופן חיצונית שקופה\nאיזור נפרד לכוסות יין ואביזרי יין (עדיין סגור, אבל אולי שקוף. שיהיה חלק מארון שיהיה שקוף)\nקולט אדים טוב\nכיריים בקו אחד חלק עם השיש\nפתרונות למקומות חבויים/מזווה\n\n\n\n",
+        "imageIds": [
+          "70f4bbc8-5c6d-4dfc-a3f3-f685039e3e11",
+          "4d6cbeef-ea51-4319-8149-536f9747bd0d",
+          "3907407f-aa31-4f3c-ae57-e0f9a195de3e",
+          "939f7b0b-9c0c-499a-abae-121f0c465a80",
+          "cfafe2fb-3760-428d-b85b-bc4d7ae8ff92",
+          "b9ee4b97-593f-4e6c-8ac3-86f584d3e781",
+          "f48fcbc2-cc33-4c53-b94c-d13000b63142",
+          "39d3dd89-45e9-48b3-b498-6071b0146139",
+          "5bc9a389-2af5-42d2-898e-787f21d7fac3",
+          "94a3d0ff-2194-42e0-be0a-3bb45e62251e",
+          "9adcf0e1-d8f8-4594-8002-8a077f4cb41a",
+          "9d33a386-4018-4caa-9b9d-e0d5a7c7a5de",
+          "5494ab48-d56e-49b2-aaad-d73039cd1680"
+        ]
+      },
+      {
+        "id": "1a4a039e-e7fe-4d91-ad4e-47ae9dcb0ea1",
+        "name": "Living room",
+        "notes": "משחק עם התקרה?\nלשנות מפסקים לתריסים\n\n",
+        "imageIds": [
+          "3ef3c10c-d94d-4cd2-900a-a6eba5544235",
+          "65a73c3e-d479-439a-8426-7e98dd2efdf7"
+        ]
+      },
+      {
+        "id": "3415addf-bb47-43c1-ac37-eadbf122b06d",
+        "name": "Master bedroom",
+        "notes": "לבטל מאוורר, כי אפשר מחשמל (הערה כללית)\nלבטל אינטרקום בחדר שינה\nלעשות צלב לחשמל בחדר שינה (אפילו 3)",
+        "imageIds": [
+          "474603af-e347-4243-97c7-a5fde3a0d0e6",
+          "f0d6d68e-a446-4b6a-8cac-c84d1e45fd0e",
+          "c6852a88-47b1-4265-bc35-2acf827c2a12",
+          "b9f1eb37-38b6-4256-80c8-2d7e58566cc5"
+        ]
+      },
+      {
+        "id": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+        "name": "General vibes",
+        "notes": "",
+        "imageIds": [
+          "70773e45-232a-4704-a011-5e1d7c5ac6de",
+          "b2c3bc5c-0e90-42fd-a672-fe53e233ff30",
+          "2ea39dfc-a184-4ec8-9ed6-dd6bd11a45f2",
+          "1b8c03da-efcd-4665-aa4d-a5e500ce5034",
+          "fee643b1-519f-4ae1-9849-0660823bc67e",
+          "c92db300-eb5e-4eee-956e-971eaf6ccece",
+          "2bca8ee4-da92-488e-b5b6-9752bb98f09e",
+          "a517b962-97ff-4f9f-b5a2-76d6898b9113",
+          "924f6111-8dc4-4820-84ab-67b75aa46833",
+          "35ce3fc8-3519-46db-ae97-cf17d7e87d39",
+          "e774156b-4dd0-4b53-89f8-b32d119e54fb",
+          "ac41b68f-f37a-49e1-8f20-2b40ac2f9797",
+          "8be1075d-a58b-4958-ace1-0744295f9315"
+        ]
+      },
+      {
+        "id": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+        "name": "Bathroom",
+        "notes": "",
+        "imageIds": [
+          "13347c08-d011-4248-99a5-0d6252847f69",
+          "ac60c9b8-8d3e-4fe4-9a44-9482cf04d528",
+          "4c3c72c1-5bf7-45fe-b50a-2e3cbc382e73",
+          "44c4a5de-93e5-4ea9-820d-30e06235a8f7",
+          "046e7366-1569-4711-acf0-4dce9e655c2b",
+          "1180ba5b-1f5b-4300-837a-8cffdedeba83",
+          "3e5dbeae-236a-4712-bbf0-fb2df97b7ac4",
+          "f6c35231-1e84-44a1-85ca-60c0dd7b9842"
+        ]
+      },
+      {
+        "id": "1dc1eff8-ba65-4bd2-88bc-d75a994854c2",
+        "name": "Corridor",
+        "notes": "",
+        "imageIds": []
+      },
+      {
+        "id": "93647518-1805-4642-a48a-75f84ef5bbd3",
+        "name": "Garden",
+        "notes": "אנה: ״אושר לך גופי תאורה על הדופן החומסה מסביב לגינה בגובה 40 , התקנה של גוף תאורה לבחירת החברה לידיעתך . גופי תאורה שסימנתי שיהיו בתקרה –לא אושר״\nנקודות מים וגז בחצר\nלהכפיל שקעים\nלתכנן תאורה\nלבדוק איפה אפשר לשתול עצים גדולים\n",
+        "imageIds": []
+      },
+      {
+        "id": "4179facc-8af0-4970-940d-451772a87713",
+        "name": "Office",
+        "notes": "למצוא את החברה של הלוחות המחיקים היפים",
+        "imageIds": []
+      },
+      {
+        "id": "11503e00-327f-4747-afbb-df0d204bd2b8",
+        "name": "Wine",
+        "notes": "",
+        "imageIds": [
+          "00196198-df7b-4d66-b365-c9180cc313aa",
+          "d26bcb27-ea6f-4f45-aead-b29711c9c8aa"
+        ]
+      },
+      {
+        "id": "522f4ee7-3a65-45a4-9260-03804966a5e9",
+        "name": "Family room",
+        "notes": "הפרדה ״עדינה״ בין חדר המשפחה לסלון, שיוצרת תחושת מרחב (דלת פרופיל בלגי?)",
+        "imageIds": [
+          "dc2afcda-7309-4753-a122-d66a3458273c",
+          "ed46f6d6-7c12-4679-af07-4bb5e5d9326f"
+        ]
+      },
+      {
+        "id": "27fe2361-dc27-448e-9910-02cc00fd2fe1",
+        "name": "Laundry room",
+        "notes": "להזיז הכנות בחדר כביסה",
+        "imageIds": []
+      },
+      {
+        "id": "1c019aed-f1c5-487a-8e8a-3e7754119078",
+        "name": "Closet room",
+        "notes": "לחשוב על תאורה טובה",
+        "imageIds": [
+          "864c749f-756b-42fa-821c-027efafd094c",
+          "c9b257b9-7584-48f1-aeec-f45cc4c1e3c0"
+        ]
+      },
+      {
+        "id": "85f3d120-4ce7-42e3-9827-dfbe4ace9373",
+        "name": "General",
+        "notes": "לבטל קווי טלפון\nיחידות מזגן נפרדות בחדרים\nלבדוק OpenArt אחד והשאר רגילים\nלוודא גדר עד 1.80\n\n",
+        "imageIds": []
+      }
+    ],
+    "activeRoomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+    "activeImageId": "70f4bbc8-5c6d-4dfc-a3f3-f685039e3e11",
+    "tags": [
+      "Dean",
+      "Avital",
+      "Both"
+    ]
+  },
+  "images": [
+    {
+      "id": "00196198-df7b-4d66-b365-c9180cc313aa",
+      "roomId": "11503e00-327f-4747-afbb-df0d204bd2b8",
+      "name": "my-wine-closet-v0-vqq9hx5audgg1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:50:13.299Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://preview.redd.it/my-wine-closet-v0-vqq9hx5audgg1.jpg?width=640&crop=smart&auto=webp&s=8bc10c12c69d527ce21568e6c0e215dcfce0f25d",
+      "source": "remote",
+      "originalUrl": "https://preview.redd.it/my-wine-closet-v0-vqq9hx5audgg1.jpg?width=640&crop=smart&auto=webp&s=8bc10c12c69d527ce21568e6c0e215dcfce0f25d"
+    },
+    {
+      "id": "046e7366-1569-4711-acf0-4dce9e655c2b",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "Screenshot 2026-07-02 at 23.13.08.png",
+      "type": "image/png",
+      "size": 6376146,
+      "createdAt": "2026-07-03T11:27:21.406Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/046e7366-1569-4711-acf0-4dce9e655c2b.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "1180ba5b-1f5b-4300-837a-8cffdedeba83",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "Screenshot 2026-07-02 at 23.11.18.png",
+      "type": "image/png",
+      "size": 2443775,
+      "createdAt": "2026-07-03T11:30:11.821Z",
+      "note": "אריחים",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/1180ba5b-1f5b-4300-837a-8cffdedeba83.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "13347c08-d011-4248-99a5-0d6252847f69",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "Aman_Kyoto_Accommodation_Bathroom-2.webp",
+      "type": "image/webp",
+      "size": 0,
+      "createdAt": "2026-07-01T23:14:17.250Z",
+      "note": "שילוב בין העץ לאבן/קרמיקה",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-03/Aman_Kyoto_Accommodation_Bathroom-2.webp?itok=Uu2RYb_i",
+      "source": "remote",
+      "originalUrl": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-03/Aman_Kyoto_Accommodation_Bathroom-2.webp?itok=Uu2RYb_i"
+    },
+    {
+      "id": "1b8c03da-efcd-4665-aa4d-a5e500ce5034",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "Kaede Rooms, Aman Kyoto, Japan_1.webp",
+      "type": "image/webp",
+      "size": 0,
+      "createdAt": "2026-07-01T23:15:55.411Z",
+      "note": "לחשוב על מן ספסל נמוך כזה לאורך קיר בסלון",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://www.aman.com/sites/default/files/styles/media_text_side_by_side_portrait_xwide_up_2x/public/2021-02/Kaede%20Rooms%2C%20Aman%20Kyoto%2C%20Japan_1.webp?itok=sWeACyhF",
+      "source": "remote",
+      "originalUrl": "https://www.aman.com/sites/default/files/styles/media_text_side_by_side_portrait_xwide_up_2x/public/2021-02/Kaede%20Rooms%2C%20Aman%20Kyoto%2C%20Japan_1.webp?itok=sWeACyhF"
+    },
+    {
+      "id": "2bca8ee4-da92-488e-b5b6-9752bb98f09e",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "APNQkAEp_ZdHjUx4pbKseVQx1jxagtPanXez3lVkTjZhh8TaZaLgd19WPsCCCAumC2squjzN2ntjuB0uyJIylpewiqQgfii4QRrYTKzQkBjRVxLWh-aoYVfuBF2nlRiOtwSs6zQEan3H=s1360-w1360-h1020-rw",
+      "type": "image/webp",
+      "size": 221558,
+      "createdAt": "2026-07-01T23:18:15.354Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/2bca8ee4-da92-488e-b5b6-9752bb98f09e.webp",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "2ea39dfc-a184-4ec8-9ed6-dd6bd11a45f2",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "zWQqX3nxXh3azanFGrh4CU-1920-80.jpg.webp",
+      "type": "image/webp",
+      "size": 206122,
+      "createdAt": "2026-07-01T23:13:50.857Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/2ea39dfc-a184-4ec8-9ed6-dd6bd11a45f2.webp",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "35ce3fc8-3519-46db-ae97-cf17d7e87d39",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "Norm-Architects_Holmen-Abode_highres_JBP_25-1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:29:59.047Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2024/09/Norm-Architects_Holmen-Abode_highres_JBP_25-1.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2024/09/Norm-Architects_Holmen-Abode_highres_JBP_25-1.jpg"
+    },
+    {
+      "id": "3907407f-aa31-4f3c-ae57-e0f9a195de3e",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Lignum et lapis_arclinea kitchen_natural oak_3.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:23:19.311Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dwae5d2792/5_COLLECTION/LIGNUM%202024%20MDW/Lignum%20et%20lapis_arclinea%20kitchen_natural%20oak_3.jpg?sw=1400&bgcolor=FFFFFF",
+      "source": "remote",
+      "originalUrl": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dwae5d2792/5_COLLECTION/LIGNUM%202024%20MDW/Lignum%20et%20lapis_arclinea%20kitchen_natural%20oak_3.jpg?sw=1400&bgcolor=FFFFFF"
+    },
+    {
+      "id": "39d3dd89-45e9-48b3-b498-6071b0146139",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "csm_bulthaup-ref-orly-shrem__6__8128295392.jpeg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:40:38.937Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://bulthaup.co.il/wp-content/uploads/2023/01/csm_bulthaup-ref-orly-shrem__6__8128295392.jpeg",
+      "source": "remote",
+      "originalUrl": "https://bulthaup.co.il/wp-content/uploads/2023/01/csm_bulthaup-ref-orly-shrem__6__8128295392.jpeg"
+    },
+    {
+      "id": "3e5dbeae-236a-4712-bbf0-fb2df97b7ac4",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "Screenshot 2026-07-02 at 22.55.47.png",
+      "type": "image/png",
+      "size": 1691626,
+      "createdAt": "2026-07-03T11:36:38.648Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/3e5dbeae-236a-4712-bbf0-fb2df97b7ac4.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "3ef3c10c-d94d-4cd2-900a-a6eba5544235",
+      "roomId": "1a4a039e-e7fe-4d91-ad4e-47ae9dcb0ea1",
+      "name": "NORM_ARCHITECTS_KINUTA_TERRACE_WEB_47-2.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:20:04.339Z",
+      "note": "אלמנט של בטון חשוף",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2023/12/NORM_ARCHITECTS_KINUTA_TERRACE_WEB_47-2.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2023/12/NORM_ARCHITECTS_KINUTA_TERRACE_WEB_47-2.jpg"
+    },
+    {
+      "id": "44c4a5de-93e5-4ea9-820d-30e06235a8f7",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "SJagBienirll_0_0_2048_1365_0_x-large.jpg",
+      "type": "image/jpeg",
+      "size": 62124,
+      "createdAt": "2026-07-01T23:54:52.509Z",
+      "note": "אולי פרופיל צבעים שמתאים לשירותי אורחים",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/44c4a5de-93e5-4ea9-820d-30e06235a8f7.jpg",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "474603af-e347-4243-97c7-a5fde3a0d0e6",
+      "roomId": "3415addf-bb47-43c1-ac37-eadbf122b06d",
+      "name": "210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Aman_Kyoto_33.webp",
+      "type": "image/webp",
+      "size": 0,
+      "createdAt": "2026-07-01T23:15:04.765Z",
+      "note": "לשלב חיפוי עץ דומה מאחורי המיטה (לא בכל החדר)",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-01/210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Aman_Kyoto_33.webp?itok=nlzsv91G",
+      "source": "remote",
+      "originalUrl": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-01/210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Aman_Kyoto_33.webp?itok=nlzsv91G"
+    },
+    {
+      "id": "4c3c72c1-5bf7-45fe-b50a-2e3cbc382e73",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "Norm-Architects_Strandgaarden_JBP_2022_01-1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:27:07.448Z",
+      "note": "סטייל שונה לשירותי אורחים",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2025/10/Norm-Architects_Strandgaarden_JBP_2022_01-1.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2025/10/Norm-Architects_Strandgaarden_JBP_2022_01-1.jpg"
+    },
+    {
+      "id": "4d6cbeef-ea51-4319-8149-536f9747bd0d",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "1214_Arclinea kitchen_ News Seoul_11.jpeg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:22:57.518Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw76d5b76d/4_JOURNAL_SHOWROOM/Seoul/1214_Arclinea%20kitchen_%20News%20Seoul_11.jpeg?sw=1400&bgcolor=FFFFFF",
+      "source": "remote",
+      "originalUrl": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw76d5b76d/4_JOURNAL_SHOWROOM/Seoul/1214_Arclinea%20kitchen_%20News%20Seoul_11.jpeg?sw=1400&bgcolor=FFFFFF"
+    },
+    {
+      "id": "5494ab48-d56e-49b2-aaad-d73039cd1680",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Screenshot 2026-07-02 at 3.01.09.png",
+      "type": "image/png",
+      "size": 7022604,
+      "createdAt": "2026-07-03T11:42:20.596Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/5494ab48-d56e-49b2-aaad-d73039cd1680.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "5bc9a389-2af5-42d2-898e-787f21d7fac3",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "BJOxjA00MYhll_0_0_3000_1889_0_x-large.jpg",
+      "type": "image/jpeg",
+      "size": 78883,
+      "createdAt": "2026-07-01T23:53:30.190Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/5bc9a389-2af5-42d2-898e-787f21d7fac3.jpg",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "65a73c3e-d479-439a-8426-7e98dd2efdf7",
+      "roomId": "1a4a039e-e7fe-4d91-ad4e-47ae9dcb0ea1",
+      "name": "HkV0SdAANyl_0_0_3000_2001_0_x-large.jpg",
+      "type": "image/jpeg",
+      "size": 83233,
+      "createdAt": "2026-07-01T23:51:06.153Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/65a73c3e-d479-439a-8426-7e98dd2efdf7.jpg",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "70773e45-232a-4704-a011-5e1d7c5ac6de",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "NormArchitects_VigiHouse_Photocredits_SandieLykkeNolsoe36_web.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T22:35:55.101Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2023/08/NormArchitects_VigiHouse_Photocredits_SandieLykkeNolsoe36_web.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2023/08/NormArchitects_VigiHouse_Photocredits_SandieLykkeNolsoe36_web.jpg"
+    },
+    {
+      "id": "70f4bbc8-5c6d-4dfc-a3f3-f685039e3e11",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "csm_bulthaup-tel-aviv-rebecca-seror__4__2e1a952358.jpeg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:12:52.585Z",
+      "note": "משטח עבודה על האי",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://bulthaup.co.il/wp-content/uploads/2023/01/csm_bulthaup-tel-aviv-rebecca-seror__4__2e1a952358.jpeg",
+      "source": "remote",
+      "originalUrl": "https://bulthaup.co.il/wp-content/uploads/2023/01/csm_bulthaup-tel-aviv-rebecca-seror__4__2e1a952358.jpeg"
+    },
+    {
+      "id": "864c749f-756b-42fa-821c-027efafd094c",
+      "roomId": "1c019aed-f1c5-487a-8e8a-3e7754119078",
+      "name": "Screenshot 2026-07-02 at 23.14.48.png",
+      "type": "image/png",
+      "size": 2462249,
+      "createdAt": "2026-07-03T11:26:01.739Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/864c749f-756b-42fa-821c-027efafd094c.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "8be1075d-a58b-4958-ace1-0744295f9315",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "Screenshot 2026-07-02 at 1.11.49.png",
+      "type": "image/png",
+      "size": 9979428,
+      "createdAt": "2026-07-03T11:42:37.635Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/8be1075d-a58b-4958-ace1-0744295f9315.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "924f6111-8dc4-4820-84ab-67b75aa46833",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "Norm-Architects_Strandgaarden_SLN_2025_02-1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:27:41.149Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2025/10/Norm-Architects_Strandgaarden_SLN_2025_02-1.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2025/10/Norm-Architects_Strandgaarden_SLN_2025_02-1.jpg"
+    },
+    {
+      "id": "939f7b0b-9c0c-499a-abae-121f0c465a80",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Italia kitchen double island Arclinea handle 13.jpeg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:24:09.675Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw251419c0/5_COLLECTION/PDP%20ITALIA%20DUBLE%20ISLAND/2_PRODUCT/Italia%20kitchen%20double%20island%20Arclinea%20handle%2013.jpeg?sw=1080&bgcolor=FFFFFF",
+      "source": "remote",
+      "originalUrl": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw251419c0/5_COLLECTION/PDP%20ITALIA%20DUBLE%20ISLAND/2_PRODUCT/Italia%20kitchen%20double%20island%20Arclinea%20handle%2013.jpeg?sw=1080&bgcolor=FFFFFF"
+    },
+    {
+      "id": "94a3d0ff-2194-42e0-be0a-3bb45e62251e",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Screenshot 2026-07-02 at 23.02.59.png",
+      "type": "image/png",
+      "size": 2361150,
+      "createdAt": "2026-07-03T11:36:10.042Z",
+      "note": "אולי החלק השקוף במטבח יכול להיות נפרד",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/94a3d0ff-2194-42e0-be0a-3bb45e62251e.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "9adcf0e1-d8f8-4594-8002-8a077f4cb41a",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Screenshot 2026-07-02 at 22.50.45.png",
+      "type": "image/png",
+      "size": 3252262,
+      "createdAt": "2026-07-03T11:41:16.860Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/9adcf0e1-d8f8-4594-8002-8a077f4cb41a.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "9d33a386-4018-4caa-9b9d-e0d5a7c7a5de",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Screenshot 2026-07-02 at 3.02.10.png",
+      "type": "image/png",
+      "size": 6847380,
+      "createdAt": "2026-07-03T11:41:54.246Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/9d33a386-4018-4caa-9b9d-e0d5a7c7a5de.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "a517b962-97ff-4f9f-b5a2-76d6898b9113",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "NORM_ARCHITECTS_KINUTA_TERRACE_WEB_34-1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:19:41.711Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2023/12/NORM_ARCHITECTS_KINUTA_TERRACE_WEB_34-1.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2023/12/NORM_ARCHITECTS_KINUTA_TERRACE_WEB_34-1.jpg"
+    },
+    {
+      "id": "ac41b68f-f37a-49e1-8f20-2b40ac2f9797",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "Screenshot 2026-07-02 at 23.12.18.png",
+      "type": "image/png",
+      "size": 5977757,
+      "createdAt": "2026-07-03T11:28:05.014Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/ac41b68f-f37a-49e1-8f20-2b40ac2f9797.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "ac60c9b8-8d3e-4fe4-9a44-9482cf04d528",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "aman_tokyo_deluxe_suite_bathroom_0.webp",
+      "type": "image/webp",
+      "size": 0,
+      "createdAt": "2026-07-01T23:17:33.127Z",
+      "note": "האריחים",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2023-08/aman_tokyo_deluxe_suite_bathroom_0.webp?itok=LxGrp3kQ",
+      "source": "remote",
+      "originalUrl": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2023-08/aman_tokyo_deluxe_suite_bathroom_0.webp?itok=LxGrp3kQ"
+    },
+    {
+      "id": "b2c3bc5c-0e90-42fd-a672-fe53e233ff30",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "fgSU98mRo05690QWINaEc9IqUhJ0ud5DDSsbo-5I3SaMWETUZDmvsZh10U0C_BRCGM2bYXdyV5tHG-QOS4RJ_Gje_u8o2iNlgeWsvoZ9ofgoIxUHWkbdVhrvvAAu-w3SYfBWB_BX4UtlhG2wY89FKMuZYxOEaUtopjLTRowwxP4ywdvo68RMJZ6a2JH0y8kq",
+      "type": "image/*",
+      "size": 0,
+      "createdAt": "2026-07-01T23:13:40.844Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://images.openai.com/static-rsc-4/fgSU98mRo05690QWINaEc9IqUhJ0ud5DDSsbo-5I3SaMWETUZDmvsZh10U0C_BRCGM2bYXdyV5tHG-QOS4RJ_Gje_u8o2iNlgeWsvoZ9ofgoIxUHWkbdVhrvvAAu-w3SYfBWB_BX4UtlhG2wY89FKMuZYxOEaUtopjLTRowwxP4ywdvo68RMJZ6a2JH0y8kq?purpose=fullsize",
+      "source": "remote",
+      "originalUrl": "https://images.openai.com/static-rsc-4/fgSU98mRo05690QWINaEc9IqUhJ0ud5DDSsbo-5I3SaMWETUZDmvsZh10U0C_BRCGM2bYXdyV5tHG-QOS4RJ_Gje_u8o2iNlgeWsvoZ9ofgoIxUHWkbdVhrvvAAu-w3SYfBWB_BX4UtlhG2wY89FKMuZYxOEaUtopjLTRowwxP4ywdvo68RMJZ6a2JH0y8kq?purpose=fullsize"
+    },
+    {
+      "id": "b9ee4b97-593f-4e6c-8ac3-86f584d3e781",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Norm-Architects_KENT-AVENUE_JBP_39-1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:27:57.926Z",
+      "note": "פינת הכנת קפה וכו׳ חבויה? אולי גם עם מדף נשלף בתחתית",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_39-1.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_39-1.jpg"
+    },
+    {
+      "id": "b9f1eb37-38b6-4256-80c8-2d7e58566cc5",
+      "roomId": "3415addf-bb47-43c1-ac37-eadbf122b06d",
+      "name": "20240403-Norm-042-kopier.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:31:15.565Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2024/06/20240403-Norm-042-kopier.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2024/06/20240403-Norm-042-kopier.jpg"
+    },
+    {
+      "id": "c6852a88-47b1-4265-bc35-2acf827c2a12",
+      "roomId": "3415addf-bb47-43c1-ac37-eadbf122b06d",
+      "name": "Norm-Architects_KENT-AVENUE_JBP_87.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:29:04.493Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_87.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_87.jpg"
+    },
+    {
+      "id": "c92db300-eb5e-4eee-956e-971eaf6ccece",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Amanemu_19.webp",
+      "type": "image/webp",
+      "size": 0,
+      "createdAt": "2026-07-01T23:18:07.427Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-01/210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Amanemu_19.webp?itok=hPZFRB_v",
+      "source": "remote",
+      "originalUrl": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-01/210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Amanemu_19.webp?itok=hPZFRB_v"
+    },
+    {
+      "id": "c9b257b9-7584-48f1-aeec-f45cc4c1e3c0",
+      "roomId": "1c019aed-f1c5-487a-8e8a-3e7754119078",
+      "name": "Screenshot 2026-07-02 at 23.14.22.png",
+      "type": "image/png",
+      "size": 3213355,
+      "createdAt": "2026-07-03T11:26:36.134Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/c9b257b9-7584-48f1-aeec-f45cc4c1e3c0.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "cfafe2fb-3760-428d-b85b-bc4d7ae8ff92",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Kitchen model_ITALIA_double island_21.jpeg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:24:23.437Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw2347bfe3/5_COLLECTION/PDP%20ITALIA%20DUBLE%20ISLAND/2_PRODUCT/2.2%20Product/Kitchen%20model_ITALIA_double%20island_21.jpeg?sw=1320&bgcolor=FFFFFF",
+      "source": "remote",
+      "originalUrl": "https://arclinea.com/dw/image/v2/BFXX_PRD/on/demandware.static/-/Library-Sites-Arclinea-contentlib/default/dw2347bfe3/5_COLLECTION/PDP%20ITALIA%20DUBLE%20ISLAND/2_PRODUCT/2.2%20Product/Kitchen%20model_ITALIA_double%20island_21.jpeg?sw=1320&bgcolor=FFFFFF"
+    },
+    {
+      "id": "d26bcb27-ea6f-4f45-aead-b29711c9c8aa",
+      "roomId": "11503e00-327f-4747-afbb-df0d204bd2b8",
+      "name": "since-were-posting-cellar-pics-v0-kxnh300h07gg1.jpeg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:50:27.598Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://preview.redd.it/since-were-posting-cellar-pics-v0-kxnh300h07gg1.jpeg?width=640&crop=smart&auto=webp&s=ba52e0088c0f77529383e96efd4b27c8d21de727",
+      "source": "remote",
+      "originalUrl": "https://preview.redd.it/since-were-posting-cellar-pics-v0-kxnh300h07gg1.jpeg?width=640&crop=smart&auto=webp&s=ba52e0088c0f77529383e96efd4b27c8d21de727"
+    },
+    {
+      "id": "dc2afcda-7309-4753-a122-d66a3458273c",
+      "roomId": "522f4ee7-3a65-45a4-9260-03804966a5e9",
+      "name": "NORM_ARCHITECTS_PH_HOUSE_II_WEB_07-1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:20:23.523Z",
+      "note": "סגנון הפרקט הזה לחדר המשפחה",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2024/02/NORM_ARCHITECTS_PH_HOUSE_II_WEB_07-1.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2024/02/NORM_ARCHITECTS_PH_HOUSE_II_WEB_07-1.jpg"
+    },
+    {
+      "id": "e774156b-4dd0-4b53-89f8-b32d119e54fb",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "S1eejAuGF2lg_0_0_2000_3000_0_x-large.jpg",
+      "type": "image/jpeg",
+      "size": 171504,
+      "createdAt": "2026-07-01T23:53:47.411Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/e774156b-4dd0-4b53-89f8-b32d119e54fb.jpg",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "ed46f6d6-7c12-4679-af07-4bb5e5d9326f",
+      "roomId": "522f4ee7-3a65-45a4-9260-03804966a5e9",
+      "name": "kappe-residence-usa-1965-67-by-ray-kappe-v0-vchn43eo9aqg1.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:46:55.393Z",
+      "note": "שיהיה צבעוני יותר משאר הסלון?",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://preview.redd.it/kappe-residence-usa-1965-67-by-ray-kappe-v0-vchn43eo9aqg1.jpg?width=640&crop=smart&auto=webp&s=c1e056cfc914aa5f9f36767ac8246f9078f538c7",
+      "source": "remote",
+      "originalUrl": "https://preview.redd.it/kappe-residence-usa-1965-67-by-ray-kappe-v0-vchn43eo9aqg1.jpg?width=640&crop=smart&auto=webp&s=c1e056cfc914aa5f9f36767ac8246f9078f538c7"
+    },
+    {
+      "id": "f0d6d68e-a446-4b6a-8cac-c84d1e45fd0e",
+      "roomId": "3415addf-bb47-43c1-ac37-eadbf122b06d",
+      "name": "aman_tokyo_grand_suite_king_bedroom_2.webp",
+      "type": "image/webp",
+      "size": 0,
+      "createdAt": "2026-07-01T23:17:13.556Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2023-08/aman_tokyo_grand_suite_king_bedroom_2.webp?itok=epWDIZSe",
+      "source": "remote",
+      "originalUrl": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2023-08/aman_tokyo_grand_suite_king_bedroom_2.webp?itok=epWDIZSe"
+    },
+    {
+      "id": "f48fcbc2-cc33-4c53-b94c-d13000b63142",
+      "roomId": "6cec8db9-d7ef-48b5-91b9-aa75c55da0b7",
+      "name": "Norm-Architects_KENT-AVENUE_JBP_33.jpg",
+      "type": "image/jpeg",
+      "size": 0,
+      "createdAt": "2026-07-01T23:39:11.671Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_33.jpg",
+      "source": "remote",
+      "originalUrl": "https://normcph.com/wp-content/uploads/2024/10/Norm-Architects_KENT-AVENUE_JBP_33.jpg"
+    },
+    {
+      "id": "f6c35231-1e84-44a1-85ca-60c0dd7b9842",
+      "roomId": "d65fd0ac-9b34-48d0-bbd5-d59ff907d2ec",
+      "name": "Screenshot 2026-07-02 at 3.03.15.png",
+      "type": "image/png",
+      "size": 2228654,
+      "createdAt": "2026-07-03T11:41:38.935Z",
+      "note": "",
+      "tags": [
+        "Dean"
+      ],
+      "url": "./shared-assets/f6c35231-1e84-44a1-85ca-60c0dd7b9842.png",
+      "source": "asset",
+      "originalUrl": ""
+    },
+    {
+      "id": "fee643b1-519f-4ae1-9849-0660823bc67e",
+      "roomId": "a3fa8baf-2790-4989-9bf3-2cf171a9c589",
+      "name": "210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Aman_Kyoto_41.webp",
+      "type": "image/webp",
+      "size": 0,
+      "createdAt": "2026-07-01T23:16:28.764Z",
+      "note": "קונטרסט הצבעים בין הפנים לחוץ",
+      "tags": [
+        "Dean"
+      ],
+      "url": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-01/210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Aman_Kyoto_41.webp?itok=2QKD5Ip8",
+      "source": "remote",
+      "originalUrl": "https://www.aman.com/sites/default/files/styles/full_size_extra_large_2x/public/2021-01/210125_AmanWebsite2021_LandscapeImageFrame_WholePixels_Aman_Kyoto_41.webp?itok=2QKD5Ip8"
+    }
+  ]
+}
