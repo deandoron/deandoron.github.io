@@ -134,6 +134,10 @@ a:hover {color:#B1040E;}
 	font-style: italic;
 	color:#e67a18;
 }
+.students-callout {
+	margin: 12px 0;
+	color: #d87918;
+}
 .col-remark {
 	text-align: justify;
 	font-style: italic;
