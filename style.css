@@ -138,6 +138,74 @@ a:hover {color:#B1040E;}
 	margin: 12px 0;
 	color: #d87918;
 }
+.derand-project {
+	padding: 3px 0 4px;
+}
+.derand-eyebrow {
+	color: #8c1515;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.derand-heading {
+	font-family: 'Rubik', sans-serif;
+	font-size: 26px;
+	line-height: 1.15;
+	margin-bottom: 3px;
+}
+.derand-title {
+	font-size: 17px;
+	line-height: 1.3;
+	margin-bottom: 17px;
+}
+.derand-summary {
+	padding-bottom: 8px;
+}
+.derand-project-link {
+	margin-bottom: 24px;
+}
+.derand-recruiting {
+	border-left: 3px solid #d87918;
+	margin: 0 0 30px;
+	padding: 5px 0 2px 21px;
+}
+.derand-recruiting h2 {
+	font-family: 'Rubik', sans-serif;
+	font-size: 21px;
+	line-height: 1.25;
+	margin-bottom: 14px;
+}
+.derand-recruiting h3 {
+	font-family: 'Rubik', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.3;
+	margin: 18px 0 7px;
+}
+.derand-recruiting h2 + h3 {
+	margin-top: 0;
+}
+.derand-recruiting p {
+	line-height: 1.5;
+	margin-bottom: 13px;
+	text-align: justify;
+}
+.derand-recruiting .derand-apply {
+	margin-bottom: 0;
+}
+.derand-logos {
+	align-items: center;
+	border-top: 1px solid #eee;
+	display: flex;
+	gap: 42px;
+	padding-top: 21px;
+}
+.derand-eu-logo {
+	width: 145px;
+}
+.derand-erc-logo {
+	width: 145px;
+}
 .col-remark {
 	text-align: justify;
 	font-style: italic;
