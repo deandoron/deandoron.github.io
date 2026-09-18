@@ -1,12 +1,27 @@
-$(document).ready(init());
+var pages = {
+	home: 'home.html',
+	papers: 'papers.html',
+	teaching: 'teaching.html',
+	students: 'students.html',
+	derand: 'derand.html',
+	contact: 'contact.html'
+};
+
+$(document).ready(init);
 
 function init() {
-	initHome();
+	initNavigation();
 	initImg();
 }
 
-function initHome() {
-	$('#main-content').load('home.html');
+function initNavigation() {
+	$(window).on('hashchange', loadPage);
+	loadPage();
+}
+
+function loadPage() {
+	var page = window.location.hash.substring(1).toLowerCase();
+	$('#main-content').load(pages[page] || pages.home);
 }
 
 function initImg() {
