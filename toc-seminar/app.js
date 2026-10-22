@@ -106,6 +106,20 @@ function eventElement(event, featured, isPast = false) {
 
 let scheduleData;
 let transitionTimer;
+let loadingSchedule = false;
+let scheduleSerialized;
+
+function renderFreshness(data) {
+  const updated = document.getElementById('updated');
+  updated.hidden = true;
+  if (data.updatedAt && Number.isFinite(Date.parse(data.updatedAt))) {
+    const stale = Date.now() - Date.parse(data.updatedAt) > 48 * 60 * 60 * 1000;
+    const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(data.updatedAt);
+    const updatedFormat = {day:'numeric',month:'long',year:'numeric',...(dateOnly ? {} : {hour:'2-digit',minute:'2-digit',hourCycle:'h23'})};
+    updated.textContent = `${stale ? 'Schedule may be out of date. ' : ''}${data.source === 'manual-export' ? 'Schedule as of ' : 'Last updated '}${format(data.updatedAt, updatedFormat)}${dateOnly ? '.' : ' (Israel time).'}`;
+    updated.hidden = false;
+  }
+}
 
 function renderSchedule(data) {
   const status = document.getElementById('status');
@@ -121,15 +135,7 @@ function renderSchedule(data) {
   const pastStatus = document.getElementById('past-status');
   pastStatus.hidden = past.length > 0;
   pastStatus.textContent = 'No past seminars are listed yet.';
-  const updated = document.getElementById('updated');
-  updated.hidden = true;
-  if (data.updatedAt && Number.isFinite(Date.parse(data.updatedAt))) {
-    const stale = now - Date.parse(data.updatedAt) > 48 * 60 * 60 * 1000;
-    const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(data.updatedAt);
-    const updatedFormat = {day:'numeric',month:'long',year:'numeric',...(dateOnly ? {} : {hour:'2-digit',minute:'2-digit',hourCycle:'h23'})};
-    updated.textContent = `${stale ? 'Schedule may be out of date. ' : ''}${data.source === 'manual-export' ? 'Schedule as of ' : 'Last updated '}${format(data.updatedAt, updatedFormat)}${dateOnly ? '.' : ' (Israel time).'}`;
-    updated.hidden = false;
-  }
+  renderFreshness(data);
   // Move talks when they end, including while the page stays open.
   clearTimeout(transitionTimer);
   const nextChange = Math.min(...events.flatMap(event => [Date.parse(event.start), Date.parse(event.end)]).filter(time => time > now));
@@ -139,6 +145,8 @@ function renderSchedule(data) {
 }
 
 async function loadSchedule() {
+  if (loadingSchedule) return;
+  loadingSchedule = true;
   const status = document.getElementById('status');
   try {
     let data = window.SEMINAR_SNAPSHOT_DATA;
@@ -148,18 +156,43 @@ async function loadSchedule() {
       data = await response.json();
     }
     if (!Array.isArray(data.events)) throw new Error('Invalid schedule');
-    scheduleData = data;
-    renderSchedule(data);
+    const serialized = JSON.stringify(data);
+    if (serialized !== scheduleSerialized) {
+      // Keep an inline abstract open when fresh data arrives for the same talk.
+      const expanded = new Set([...document.querySelectorAll('.event')]
+        .filter(article => article.querySelector('details[open]'))
+        .map(article => article.querySelector('time').dateTime + article.querySelector('h3').textContent));
+      renderSchedule(data);
+      for (const article of document.querySelectorAll('.event')) {
+        const details = article.querySelector('details');
+        if (details && expanded.has(article.querySelector('time').dateTime + article.querySelector('h3').textContent)) details.open = true;
+      }
+      scheduleData = data;
+      scheduleSerialized = serialized;
+    }
+    renderFreshness(data);
   } catch {
+    if (scheduleData) {
+      renderFreshness(scheduleData);
+      return; // Keep the last successful schedule during a transient failure.
+    }
     status.hidden = false;
     status.textContent = 'The schedule is temporarily unavailable. Please try again later or contact deand@bgu.ac.il for details.';
     const pastStatus = document.getElementById('past-status');
     pastStatus.hidden = false;
     pastStatus.textContent = 'Past seminars are temporarily unavailable.';
+  } finally {
+    loadingSchedule = false;
   }
 }
 
 document.addEventListener('visibilitychange', () => {
-  if (!document.hidden && scheduleData) renderSchedule(scheduleData);
+  if (!document.hidden) {
+    if (scheduleData) renderSchedule(scheduleData);
+    loadSchedule();
+  }
 });
 loadSchedule();
+if (!window.SEMINAR_SNAPSHOT_DATA) {
+  setInterval(() => { if (!document.hidden) loadSchedule(); }, 5 * 60 * 1000);
+}
