@@ -183,6 +183,16 @@
       "allDay": false
     },
     {
+      "title": "",
+      "speaker": "Itay Safran",
+      "affiliation": "BGU",
+      "start": "2026-11-10T10:00:00Z",
+      "end": "2026-11-10T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "",
+      "allDay": false
+    },
+    {
       "title": "Friedman prize talk",
       "speaker": "Or Lasri",
       "affiliation": "BGU",
