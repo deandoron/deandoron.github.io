@@ -1,0 +1,236 @@
+{
+  "updatedAt": "2026-10-22",
+  "source": "manual-export",
+  "events": [
+    {
+      "title": "Is there geometry in totally discrete spaces?",
+      "speaker": "Nati Linial",
+      "affiliation": "HUJI",
+      "start": "2025-11-18T10:00:00Z",
+      "end": "2025-11-18T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "Even in a totally discrete space X you need to know how to move between distinct points. A path P_{x,y} between two points x,y \\in X is a sequence of points in X that starts with x and ends with y. A path system is a collection of paths P_{x,y}, one per each pair of distinct points x, y in X. We restrict ourselves to the undirected case where P_{y,x} is P_{x,y} in reverse.\n\nStrictly metrical path systems are ubiquitous. They are defined as follows: There is some spanning, connected graph (X, E) with positive edge weights w(e) for all e\\in E and P_{x,y} is the unique w-shortest xy path. A metrical path system is defined likewise, but w-shortest paths need not be unique. Even more generally, a path system is called consistent (no w is involved here) if it satisfies the condition that when point z is in P_{x,y}, then P_{x,y} is P_{x,z} concatenated with P_{z,y}. These three categories of path systems are quite different from each other and in our work we find quantitative ways to capture these differences.\n\nJoint work with Daniel Cizma and with Maria Chudnovsky",
+      "allDay": false
+    },
+    {
+      "title": "Exact approximation ratios for some constraint satisfaction problems",
+      "speaker": "Uri Zwick",
+      "affiliation": "TAU",
+      "start": "2025-12-02T10:00:00Z",
+      "end": "2025-12-02T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "It has been known for some years now that the best approximation ratio that can be achieved for the MAX CUT problem, under the Unique Games Conjecture, is 0.87856..., exactly the ratio achieved by the celebrated SDP-based approximation algorithm of Goemans and Williamson. (This is a result of Khot, Kindler, Mossel and O’Donnell from 2007.)\n\nThe talk will describe recent advances towards determining the exact approximation ratios of several other natural Boolean maximum Constraint Satisfaction Problems (CSPs) such as MAX 2-SAT, MAX DI-CUT (Maximum directed cut) and other related problems such as MAX SAT and MAX NAE-SAT.\n\nBased on joint papers with Joshua Brakensiek, Neng Huang and Aaron Potechin",
+      "allDay": false
+    },
+    {
+      "title": "Vantage Points and Sign Patterns",
+      "speaker": "Noga Alon",
+      "affiliation": "Princeton",
+      "start": "2025-12-09T10:00:00Z",
+      "end": "2025-12-09T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "Motivated by a possible application in Social Choice, I will discuss a recent work with Defant, Kravitz and Zhu that studies the number of ways to order points in the plane or in higher dimension according to the sum of their Euclidean distances from chosen vantage points.\n\nA crucial mathematical tool here is an extension of results of Milnor and Warren about sign patterns of real polynomials, that have been used in the study of problems in Discrete Mathematics and theoretical Computer Science, to a version that deals with sign patterns of more general functions.",
+      "allDay": false
+    },
+    {
+      "title": "On VC-dimension",
+      "speaker": "Shakhar Smorodinsky",
+      "affiliation": "BGU",
+      "start": "2025-12-16T10:00:00Z",
+      "end": "2025-12-16T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "The Vapnik–Chervonenkis (VC) dimension is a fundamental combinatorial measure that captures the complexity of a set system (a hypergraph).\n\nIt lies at the heart of many areas in theoretical computer science such as machine learning, computational geometry, combinatorics, and algorithms.\n\nIn this talk I will discuss several known facts about VC-dimension such as the Sauer–Shelah-Perles lemma, and basic geometric intuition.\n\nThrough the lens of VC-dimension I will present our recent result that settles a long-standing open problem (about partitions of point sets in $\\Re^d$) posed by Gil Kalai in the 1970s.\n\nNext, I will introduce an extension of VC-dimension to r-VC-dimension which allows us to extend our framework to a Tverberg-type partition of points sets in $\\Re^d$.\n\nThe talk requires no prior background in VC theory and is intended for a wide theory audience\n\nJoint work with Noga Alon.",
+      "allDay": false
+    },
+    {
+      "title": "From Learning Theory to Cryptography: Provable Guarantees for AI",
+      "speaker": "Jonathan Shafer",
+      "affiliation": "MIT",
+      "start": "2025-12-22T10:00:00Z",
+      "end": "2025-12-22T11:00:00Z",
+      "location": "Building 37, Room 202",
+      "abstract": "Contemporary AI systems are increasingly powerful, but it remains difficult to guarantee that they work as intended. This talk will focus on provable mathematical guarantees for AI systems.\n\nStarting with a classic learning theory perspective, we present two results concerning the amount of training data that is necessary and sufficient for performance guarantees: (1) In the online learning setting, we show that access to unlabeled data can reduce the number of prediction mistakes quadratically, but no more than quadratically [NeurIPS 2023; NeurIPS 2025, Best Paper Runner-Up]. (2) In the statistical learning setting, we discuss how much labeled data is actually necessary for learning – resolving a long-standing gap left open by the celebrated VC theorem [COLT 2023].\n\nProvable guarantees are especially valuable in settings that require security in the face of malicious adversaries. Thus, the main part of the talk adopts a cryptographic perspective, discussing two techniques that yield such guarantees: (1) We show how to use interactive proof systems for delegating data collection and AI training tasks to an untrusted party [ITCS 2021, COLT 2023, NeurIPS 2025]. (2) We show how to use random self-reducibility to provably remove backdoors from AI models, even when those backdoors are themselves provably undetectable [STOC 2025].\n\nThe talk concludes with an exploration of future directions, including performance guarantees for generative models, and the potential of interactive proof systems to provide a formal approach for AI alignment against malicious and deceptive AI.",
+      "allDay": false
+    },
+    {
+      "title": "Communication, randomness and privacy beyond information-theoretic limits",
+      "speaker": "Jad Silbak",
+      "affiliation": "MIT",
+      "start": "2025-12-29T09:00:00Z",
+      "end": "2025-12-29T10:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "One of the most important insights from modern cryptography is that it is sufficient to guarantee the security and integrity of a task against computationally bounded adversaries. This approach aligns with our understanding of reality and makes it possible to bypass traditional information-theoretic limitations.\n\nIn this talk, we show that adopting this computational perspective enables us to surpass information-theoretic limits in three classic settings: communication, randomness, and privacy.\n\nCommunication: We construct efficient error-correcting codes for computationally bounded adversaries with information rates that are provably better than those possible against unbounded adversaries.\n\nRandomness: We show that while seedless deterministic extraction is impossible for general sources, it is possible to deterministically extract and condense randomness from efficiently samplable sources.\n\nPrivacy: We consider two-party differential privacy and show that achieving accuracy beyond information-theoretic limits is tightly connected to cryptographic power, giving a characterization of the computational assumptions that are necessary.",
+      "allDay": false
+    },
+    {
+      "title": "Bidding Games on Graphs",
+      "speaker": "Guy Avni",
+      "affiliation": "Haifa",
+      "start": "2025-12-30T10:00:00Z",
+      "end": "2025-12-30T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "Games on graphs constitute a fundamental class of games with applications in formal verification, multi-agent systems, and foundation of logic. A game is played on a graph as follows. A token is placed on an initial vertex and the players move it to produce an infinite path that determines the winner or payoff of the game. Traditional graph games are \"turn based\": the players alternate turns in moving the token (as in chess or tic-tac-toe). In the talk, I will present a class of games called \"bidding games\" in which in each turn, an 'auction' (bidding) determines which player moves the token. The players in a bidding game do not draw utility from their budgets, rather their budgets are a means to win the game (as in “bidding chess”) or maximize their utility in quantitative (zero sum) games. We will focus on a fundamental quantitative objective in infinite-duration games called “mean-payoff”. For two types of bidding mechanisms, “discrete bidding” in which the granularity of the bids is restricted and “continuous bidding” in which the bids can be arbitrarily small, I will present algorithms to compute the optimal payoff that can be guaranteed with an initial budget.",
+      "allDay": false
+    },
+    {
+      "title": "Structure and Applications",
+      "speaker": "Yotam Dikstein",
+      "affiliation": "Institute for Advanced Study",
+      "start": "2026-01-05T09:00:00Z",
+      "end": "2026-01-05T10:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "Expanders are graphs that are both edge-sparse and well connected. They have been an instrumental tool in many results in mathematics and computer science, some of which seem to have little connection to graphs at all. High dimensional expanders (HDXs) are hypergraph analogues of expander graphs — sparse and well connected hypergraphs. HDXs have already played a key role in several recent results in theoretical computer science and combinatorics. However, much of their underlying theory remains unexplored.\n\nMotivated by this, we will see what HDXs are, why they generalize expander graphs, and how they serve as a common setting for results in probability and computational complexity.\n\nI will illustrate their power by presenting new Chernoff-type inequalities for HDXs and explaining their applications to:\n\n1. Hardness amplification - constructing functions for which the best polynomial-time algorithm performs no better than random guessing.\n\n2. Hardness of approximation - constructing natural problems for which even approximate solutions are intractable unless P=NP.\n\nThe talk will not assume prior background in complexity theory and is aimed at a broad audience.",
+      "allDay": false
+    },
+    {
+      "title": "Threshold phenomena, discrete Fouerier analysis and isoperimetry",
+      "speaker": "Gil Kalai",
+      "affiliation": "Hebrew U, Reichman U",
+      "start": "2026-01-06T10:00:00Z",
+      "end": "2026-01-06T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "A sharp threshold phenomenon occurs in mathematical and physical systems when a qualitative property of the system changes abruptly as a continuous parameter crosses a critical value. One of the earliest observations of this behavior was made by Erdős and Rényi, who noticed that certain graph properties of random graphs exhibit sharp threshold behavior as the edge probability increases. A similar phenomenon plays a crucial role in the study of percolation, random k-SAT, and other models.\n\nDiscrete Fourier analysis and discrete isoperimetric results provide a general framework for explaining these sharp threshold phenomena. In this talk, I will describe some key results and open problems, including some highly provocative conjectures by Jeff Kahn and myself regarding the exact location of these thresholds.\n\nThe central Kahn-Kalai conjecture was recently settled by Jinyoung Park and Huy Tuan Pham, following earlier contributions by Keith Frankston, Jeff Kahn, Bhargav Narayanan, and Jinyoung Park (on a related conjecture by Talagrand), as well as by Ryan Alweiss, Shachar Lovett, Kewen Wu, and Jiapeng Zhang (on the Erdős-Rado sunflower conjecture).\n\nThis talk is introductory in nature and suitable for a broad audience.",
+      "allDay": false
+    },
+    {
+      "title": "(p,q) Theorems: From Convexity to Effective Hitting Sets",
+      "speaker": "Chaya Keller",
+      "affiliation": "Ariel U",
+      "start": "2026-01-13T10:00:00Z",
+      "end": "2026-01-13T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "The classical (p,q)-theorem of Alon and Kleitman (1992) asserts that if in a family F of convex sets in R^d, among every p sets some q intersect (where p>=q>=d+1), then the entire family can be pierced by c(p,q,d) points. This theorem has led to numerous variants and generalizations, that may be called '(p,q)-theory'.\n\nIn this talk we describe a long-term effort toward making (p,q)-theory capable of producing effective results for the hitting set problem, in common scenarios studied in computational geometry. We focus on four directions: Obtaining effective bounds on the piercing number c(p,q,d), obtaining an 'effective' (p,q)-theorem for families with a bounded VC dimension (instead of the convexity assumption), obtaining (p,q)-theorems for piercing by flats (e.g., lines), and obtaining sharp (p,2)-theorems, which bound the size of the hitting set in terms of the independence number of the set system. We present a number of results obtained using a wide variety of geometric and combinatorial techniques, as well as a series of questions that remain wide open.\n\nBased on joint works with Micha Perles, Shakhar Smorodinsky, and Gabor Tardos",
+      "allDay": false
+    },
+    {
+      "title": "New directions in Algebraic Complexity",
+      "speaker": "Amir Shpilka",
+      "affiliation": "TAU",
+      "start": "2026-01-20T10:00:00Z",
+      "end": "2026-01-20T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "Algebraic complexity is the field studying the intrinsic computational difficulty of algebraic problems in algebraic models of computation, most notably algebraic circuits. It is a very natural model of computation that has attracted significant attention in the last few decades, partially due to its simplicity and elegance, but mostly because of its importance. Being a more structured model than Boolean circuits, one could hope that the fundamental problems of theoretical computer science, such as separating P from NP, deciding whether P = BPP and more, will be easier to solve for algebraic circuits.\n\nIn this talk I will introduce the basic notions and definitions, explain the main questions and how they relate to their Boolean counterparts, and discuss recent approaches to tackling the fundamental problems in the field.",
+      "allDay": false
+    },
+    {
+      "title": "Parameterized Computational Geometry: Visibility Problems, Geometric Intersection Graphs and Graph Drawing",
+      "speaker": "Meirav Zehavi",
+      "affiliation": "BGU",
+      "start": "2026-04-28T09:00:00Z",
+      "end": "2026-04-28T10:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "We will discuss three topics in Computational Geometry that have received significant attention from the perspective of Parameterized Complexity in the past few years. First, we will consider visibility problems, focusing on Art Gallery and Terrain Guarding. Second, we will consider the design of subexponential parameterized algorithms for problems on geometric intersection graphs, particularly (unit) disk graphs. Lastly, we will discuss parameterized graph drawing problems, emphasizing crossing minimization. For each topic, we will briefly discuss some basics, related works, and technical details of a selected result in that area.",
+      "allDay": false
+    },
+    {
+      "title": "Let’s try and be more tolerant: On tolerant property testing and distance approximation",
+      "speaker": "Dana Ron",
+      "affiliation": "TAU",
+      "start": "2026-05-19T09:00:00Z",
+      "end": "2026-05-19T10:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "A property testing algorithm is required to accept objects that have a prespecified property P and reject those that are relatively far from having P. To this end it is given query (or sampling) access to the object, and is allowed a small failure probability. Its query/sample complexity is required to be sublinear in the size of the object.\n\nA tolerant testing algorithm is required to also accept objects that are relatively close to having the property (while still rejecting those that are far), and a distance-approximation algorithm is required to approximate the distance to having a property.\n\nIn this talk I will present several tolerant testing / distance approximation algorithms for a variety of object-types and properties as well as discuss some hardness results. Examples include monotonicity of functions, connectivity of graphs and subsequence freeness.",
+      "allDay": false
+    },
+    {
+      "title": "Multi-Pass Streaming CSPs Lower Bounds",
+      "speaker": "Dor Minzer",
+      "affiliation": "MIT",
+      "start": "2026-06-02T09:00:00Z",
+      "end": "2026-06-02T10:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "In the Max-Cut problem in the streaming model, an algorithm is given the edges of an unknown graph G = (V, E) in some fixed order, and its goal is to approximate the size of the largest cut in G. We show that any streaming algorithm achieving an approximation ratio 1/2+\\eps for some \\eps>0 must use either polynomial memory or polynomially many passes over the input stream.\n\nThis improves upon earlier results in the area that proved lower bounds for either single-pass algorithms or algorithms with approximation ratio close to 1.\n\nTime permitting, we will discuss subsequent developments establishing a general dichotomy result for all constraint satisfaction problems in the multi-pass streaming model.\n\nBased on joint works with Yumou Fei and Shuo Wang.",
+      "allDay": false
+    },
+    {
+      "title": "Recent Progress on Extractors for Samplable Distributions",
+      "speaker": "Ronen Shaltiel",
+      "affiliation": "Haifa",
+      "start": "2026-06-09T09:00:00Z",
+      "end": "2026-06-09T10:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "In an influential paper, Trevisan and Vadhan (FOCS 2000) introduced the notion of (seedless) extractors for samplable distributions (namely, distributions that can be sampled by a poly-size circuit). Trevisan and Vadhan showed that under a strong complexity theoretic hardness assumption, there are extractors for samplable distributions with large min-entropy of $k=(1-\\gamma) \\cdot n$, for some small constant $\\gamma>0$.\n\nRecently, there has been significant progress in this area, and extractors for samplable distributions with much lower min-entropy were constructed.\n\nIn the talk, I will explain the motivation for extractors for samplable distributions, and the relation of this area to the well known area of worst-case to average-case hardness amplification. I will give a high level overview of the Trevisan-Vadhan construction, and will also explain some of the recent constructions.\n\nThis talk is based on several recent joint works with Marshall Ball, Justin Oh and Jad Silbak.",
+      "allDay": false
+    },
+    {
+      "title": "High Dimensional Expanders - a survey",
+      "speaker": "Irit Dinur",
+      "affiliation": "IAS",
+      "start": "2026-06-23T09:00:00Z",
+      "end": "2026-06-23T10:00:00Z",
+      "location": "Building 37, Room 202",
+      "abstract": "Expansion in graphs is a well studied topic, with a wealth of applications in many areas of mathematics and the theory of computation.\n\nHigh dimensional expansion is a generalization of expansion from graphs to higher dimensional objects, such ashypergraphs or simplicial complexes. This is a growing theory that has already led to progress on longstanding questions in the areas of error-correcting codes, and Probabilistically Checkable Proofs (PCPs).\n\nIn the talk I will describe the two key definitions of high dimensional expansion: cosystolic expansion and link expansion. I will then describe how these relate to some of the exciting new applications.",
+      "allDay": false
+    },
+    {
+      "title": "National CS Conference at BGU",
+      "speaker": "",
+      "affiliation": "",
+      "start": "2026-10-08T05:30:00Z",
+      "end": "2026-10-08T13:45:00Z",
+      "location": "",
+      "abstract": "",
+      "allDay": false
+    },
+    {
+      "title": "Online Submodular Welfare Maximization: Computation is not the Bottleneck",
+      "speaker": "David Wajc",
+      "affiliation": "Technion",
+      "start": "2026-10-20T09:00:00Z",
+      "end": "2026-10-20T10:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "Online Submodular Welfare maximization (OSW) is a vast generalization of numerous well-studied online allocation problems, including online bipartite matching, display ads and AdWords. Under adversarial arrivals and iid arrivals, a greedy algorithm yields a competitive ratio of 1/2 and 1-1/e, respectively. Although better bounds are known for many special cases, these guarantees are optimal for polynomial-time online algorithms unless NP=RP. In his influential survey, Mehta (2013) asked whether stronger impossibility results can be shown without any computational assumptions, while other works conjectured that more computation allows for better bounds.\n\nWe answer Mehta's question and refute the subsequent conjectures. We show that the greedy guarantees are unconditionally optimal in both arrival models, regardless of computation time. Our impossibility results extend even to fractional online algorithms measured using the generous benchmark given by the best possible rounding in hindsight.\n\nJoint work with Rajan Udwani (UC Berkeley).",
+      "allDay": false
+    },
+    {
+      "title": "Friedman prize talk",
+      "speaker": "Or Lasri",
+      "affiliation": "BGU",
+      "start": "2026-11-17T10:00:00Z",
+      "end": "2026-11-17T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "",
+      "allDay": false
+    },
+    {
+      "title": "",
+      "speaker": "Alex Samorodnitsky",
+      "affiliation": "HUJI",
+      "start": "2026-12-01T10:00:00Z",
+      "end": "2026-12-01T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "",
+      "allDay": false
+    },
+    {
+      "title": "",
+      "speaker": "Shay Moran",
+      "affiliation": "Technion, Google",
+      "start": "2026-12-08T10:00:00Z",
+      "end": "2026-12-08T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "",
+      "allDay": false
+    },
+    {
+      "title": "",
+      "speaker": "Avishay Tal",
+      "affiliation": "UC Berkeley",
+      "start": "2026-12-22T10:00:00Z",
+      "end": "2026-12-22T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "",
+      "allDay": false
+    },
+    {
+      "title": "",
+      "speaker": "Tal Yankovitz",
+      "affiliation": "U of Toronto",
+      "start": "2027-01-05T10:00:00Z",
+      "end": "2027-01-05T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "",
+      "allDay": false
+    }
+  ]
+}

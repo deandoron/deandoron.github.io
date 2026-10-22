@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Seminars at the Institute for the Theory of Computing, Ben-Gurion University of the Negev. Upcoming talks, times, locations, and abstracts.">
+  <meta name="theme-color" content="#f8f7f3">
+  <title>ToC Seminar · Ben-Gurion University</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#schedule">Skip to seminars</a>
+  <div class="page">
+    <header>
+      <div class="masthead">
+        <a class="university-brand" href="https://www.bgu.ac.il/en/"><img class="university-logo" src="assets/bgu-logo.svg" alt="Ben-Gurion University of the Negev" width="600" height="148"></a>
+        <a class="institute-link" href="https://www.bgu.ac.il/en/u/faculties/computer-and-information-science/institute-theory-computing-eng/">About the institute&nbsp;<span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="eyebrow">Ben-Gurion University of the Negev</p>
+      <h1>Theory of Computing<br><em>Seminar</em></h1>
+      <p class="intro">The seminar of the Institute for the Theory of Computing.</p>
+      <p class="faculty">Stein Faculty of Computer and Information Science</p>
+    </header>
+    <main id="schedule">
+      <section id="upcoming-section" aria-labelledby="upcoming-heading">
+        <div class="section-heading"><h2 id="upcoming-heading">Upcoming seminars</h2><span>All times are Israel time</span></div>
+        <p class="status" id="status" role="status">Loading the seminar schedule…</p>
+        <div id="events"></div>
+      </section>
+      <section id="past-section" aria-labelledby="past-heading">
+        <details class="past-archive">
+          <summary class="section-heading past-heading"><h2 id="past-heading">Past seminars</h2></summary>
+          <p class="status" id="past-status" hidden>No past seminars are listed yet.</p>
+          <div id="past-events"></div>
+        </details>
+      </section>
+      <p class="updated" id="updated" hidden></p>
+      <noscript><p>Please enable JavaScript to view the seminar schedule. For event details, contact <a href="mailto:deand@bgu.ac.il">deand@bgu.ac.il</a>.</p></noscript>
+    </main>
+    <footer><p>For any questions, contact <a href="mailto:deand@bgu.ac.il">deand@bgu.ac.il <span aria-hidden="true">↗</span></a></p><span class="footer-mark" aria-hidden="true">ToC</span></footer>
+  </div>
+  <dialog id="abstract-dialog" class="abstract-dialog" aria-labelledby="abstract-title">
+    <div class="reader-toolbar">
+      <span class="reader-label">Abstract</span>
+      <div class="reader-controls" role="group" aria-label="Abstract reading controls">
+        <button id="abstract-smaller" type="button" aria-label="Decrease abstract text size">A−</button>
+        <button id="abstract-larger" type="button" aria-label="Increase abstract text size">A+</button>
+        <button id="abstract-close" type="button" aria-label="Close abstract" autofocus>Close <span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+    <div class="reader-content">
+      <h2 id="abstract-title" dir="auto"></h2>
+      <p id="abstract-speaker" class="reader-speaker" dir="auto" hidden></p>
+      <p id="abstract-text" class="abstract-full" dir="auto"></p>
+    </div>
+    <span id="abstract-size-status" class="sr-only" role="status"></span>
+  </dialog>
+</body>
+</html>
