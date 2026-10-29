@@ -183,6 +183,16 @@
       "allDay": false
     },
     {
+      "title": "On Existence of Must-Include Paths and Cycles in Undirected Graphs",
+      "speaker": "Eyal Shimony",
+      "affiliation": "BGU",
+      "start": "2026-11-03T10:00:00Z",
+      "end": "2026-11-03T11:00:00Z",
+      "location": "Building 37, Room 201",
+      "abstract": "We study the following two closely related existence problems for an undirected graph $G=(V,E)$.\n\nPath Existence Problem (PEP): given graph vertices $s,t,w_1,w_2$, does there\n\nexist a simple path from $s$ to $t$ containing $w_1$ and $w_2$?\n\nCycle Existence Problem (CEP): does there exist\n\na simple cycle containing three given graph elements (vertices or edges)?\n\nWe reduce the PEP to the CEP, and the general graph case of the CEP to that of a triconnected graph.\n\nWe show that two simple necessary conditions for the existence of a simple cycle containing\n\n\\emph{three given edges} in a triconnected graph are sufficient\n\n(easy solutions to all other cases are known).\n\nIn addition, we develop linear-time algorithms to solve the PEP and the CEP,\n\nwhich provide useful admissible heuristics in combinatorial search for longest constrained paths.\n\nJoint work with Yefim Dinitz",
+      "allDay": false
+    },
+    {
       "title": "",
       "speaker": "Itay Safran",
       "affiliation": "BGU",
