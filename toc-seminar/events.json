@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-29",
   "source": "manual-export",
   "events": [
     {
@@ -204,20 +204,20 @@
     },
     {
       "title": "",
-      "speaker": "Alex Samorodnitsky",
-      "affiliation": "HUJI",
-      "start": "2026-12-01T10:00:00Z",
-      "end": "2026-12-01T11:00:00Z",
+      "speaker": "Rotem Oshman",
+      "affiliation": "TAU",
+      "start": "2026-11-24T10:00:00Z",
+      "end": "2026-11-24T11:00:00Z",
       "location": "Building 37, Room 201",
       "abstract": "",
       "allDay": false
     },
     {
       "title": "",
-      "speaker": "Shay Moran",
-      "affiliation": "Technion, Google",
-      "start": "2026-12-08T10:00:00Z",
-      "end": "2026-12-08T11:00:00Z",
+      "speaker": "Alex Samorodnitsky",
+      "affiliation": "HUJI",
+      "start": "2026-12-01T10:00:00Z",
+      "end": "2026-12-01T11:00:00Z",
       "location": "Building 37, Room 201",
       "abstract": "",
       "allDay": false
