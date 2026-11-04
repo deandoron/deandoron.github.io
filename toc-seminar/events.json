@@ -193,13 +193,13 @@
       "allDay": false
     },
     {
-      "title": "Every Layer Counts: An Exponential L₂ Depth Hierarchy for ReLU Networks.",
+      "title": "Why More Layers Help: A Computational Advantage of Deep Learning",
       "speaker": "Itay Safran",
       "affiliation": "BGU",
       "start": "2026-11-10T10:00:00Z",
       "end": "2026-11-10T11:00:00Z",
       "location": "Building 37, Room 201",
-      "abstract": "Depth can provably increase the expressive power of neural networks: functions represented efficiently by deeper networks may require exponentially larger networks at smaller depths. For ReLU networks, however, previous exponential separations were confined to depth 2 versus depth 3 and the “deep versus very deep” regime, where the gap between the competing depths grows with the problem parameters. Whether a single additional layer can provide an exponential advantage at every fixed depth remained open.\n\nIn this talk, I will present an exponential depth hierarchy for ReLU networks in which every additional layer can save exponentially many neurons. For every fixed k ≥ 2, we construct a globally [0,1]-valued, 1-Lipschitz function realized by a depth-(k+1) network of width O(d⁴), whereas approximating it at depth k to sufficiently small constant L₂ error requires width exponential in the input dimension, even with unrestricted weights. This establishes the first exponential hierarchy across all adjacent fixed depths.",
+      "abstract": "Can a computation become dramatically more efficient when we allow just one extra stage of processing?\n\nThis question lies at the heart of understanding neural networks, the computational models behind much of modern artificial intelligence. A neural network takes numerical inputs and processes them through a sequence of layers. Each layer consists of simple computational units that combine values from the preceding layer and apply a fixed operation. Two basic measures of a network’s complexity are its depth i.e., the number of layers and its size i.e., the total number of computational units.\n\nIn this talk, I will show that adding a single layer can reduce the size needed to compute a function from exponential to polynomial in the number of input variables. This holds at every fixed depth: for each k ≥ 2, there are functions that a network with k+1 layers computes efficiently, while any network with only k layers must be exponentially large even to approximate them.\n\nEarlier results established this phenomenon only for particular depths or for larger differences in depth. Our result shows that every additional layer can bring an exponential advantage, even for bounded functions whose outputs vary gradually with their inputs.",
       "allDay": false
     },
     {
