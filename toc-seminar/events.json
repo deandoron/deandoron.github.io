@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10",
+  "updatedAt": "2026-11-11",
   "source": "manual-export",
   "events": [
     {
@@ -203,13 +203,13 @@
       "allDay": false
     },
     {
-      "title": "Friedman prize talk",
+      "title": "Private Information Retrieval and Conditional Disclosure of Secrets Based on Matching Vectors",
       "speaker": "Or Lasri",
       "affiliation": "BGU",
       "start": "2026-11-17T10:00:00Z",
       "end": "2026-11-17T11:00:00Z",
       "location": "Building 37, Room 201",
-      "abstract": "",
+      "abstract": "How can you query a database without revealing to either server the identity of the data item you are after? This is the goal of a two-server private information retrieval (PIR) protocol, in which each server holds a copy of the database. In a breakthrough, Dvir and Gopi used matching vectors to give the first two-server PIR protocol with communication subpolynomial in the database size. I’ll show how to simplify their construction while retaining the same communication bound.\n\nI’ll then show how the simplified construction gives a simpler protocol for conditional disclosure of secrets (CDS), a closely related cryptographic primitive. One server holds a database and the other holds an index. Both know a secret and send messages to a referee, who can recover the secret if the indexed bit is 1 and learns nothing about it if the bit is 0.\n\nI’ll finish by showing how sparse matching vectors give CDS protocols in which the referee reconstruct the secret by evaluating a polynomial, and how allowing a higher reconstruction degree can reduce the communication.\n\nThis talk is based on joint papers with Bar Alon and Amos Beimel, and Oriol Farràs.",
       "allDay": false
     },
     {
