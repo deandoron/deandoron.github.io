@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-14",
   "source": "manual-export",
   "events": [
     {
@@ -274,8 +274,8 @@
     },
     {
       "title": "",
-      "speaker": "Alon Hovav",
-      "affiliation": "HUJI",
+      "speaker": "Bar Alon",
+      "affiliation": "TAU",
       "start": "2027-01-12T10:00:00Z",
       "end": "2027-01-12T11:00:00Z",
       "location": "Building 37, Room 201",
