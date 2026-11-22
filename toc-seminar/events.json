@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-22",
   "source": "manual-export",
   "events": [
     {
@@ -213,13 +213,13 @@
       "allDay": false
     },
     {
-      "title": "",
+      "title": "Communication Complexity of Multiparty Set Disjointness Under Distributions with Bounded Dependence",
       "speaker": "Rotem Oshman",
       "affiliation": "TAU",
       "start": "2026-11-24T10:00:00Z",
       "end": "2026-11-24T11:00:00Z",
       "location": "Building 37, Room 201",
-      "abstract": "",
+      "abstract": "In the multiparty set disjointness problem, we have k players, with private inputs X1,...,Xk \\subseteq [n]. The players’ goal is to check whether their sets intersect, or sometimes to compute the full intersection. It is known that in the shared blackboard model of communication, set disjointness requires Omega(n log k + k) bits of communication, and in the coordinator model, it requires Omega(nk) bits. However, these two lower bounds require that the players’ inputs can be highly correlated.\n\nWe study the communication complexity of multiparty set disjointness under distributions where the players' inputs have a bounded amount of dependence between them, and ask whether the problem becomes significantly easier, as it is known to become in the two party case.\n\nOur main result is a nearly-tight bound of tilde-Theta(n^{1-1/k}*d^{1/k}) bits for both the shared blackboard model and the coordinator model, where d is the amount of dependence between the inputs. This shows that in the shared blackboard model, as the number of players grows, having nearly-independent inputs helps less and less; but in the coordinator model, when k is large, having nearly-independent inputs makes the problem much easier. Both our upper and our lower bounds use new ideas, as the original techniques developed for the two-party case do not scale to more than two players.",
       "allDay": false
     },
     {
