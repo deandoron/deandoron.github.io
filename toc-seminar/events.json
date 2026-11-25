@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-25",
   "source": "manual-export",
   "events": [
     {
@@ -223,13 +223,13 @@
       "allDay": false
     },
     {
-      "title": "",
+      "title": "A convex modification of Delsarte's linear program",
       "speaker": "Alex Samorodnitsky",
       "affiliation": "HUJI",
       "start": "2026-12-01T10:00:00Z",
       "end": "2026-12-01T11:00:00Z",
       "location": "Building 37, Room 201",
-      "abstract": "",
+      "abstract": "Recent work of OpenAI, Alrabiah–Guruswami and Gay–Jeronimo–Liu has sharpened asymptotic bounds for binary codes, followed by Salmon’s determination of the optimal asymptotic Delsarte exponent. We suggest a different approach, which starts by considering a convex program similar to Delsarte's LP, and then uses explicit feasible solutions to this program to obtain coding bounds. This gives bounds for codes which do not have exponentially more than expected pairs of codeswords at distances n-d<D<n, where n and d are the length and minimum distance. This class includes e.g., linear codes containing the all-ones vector. Numerical comparisons indicate improvements over the OpenAI bounds starting around relative distance delta = 0.18. For linear codes in this class, the explicit structure also yields improved bounds on the covering radius of the dual—bounds we do not currently know how to obtain from the earlier constructions.\n\nThe talk is based in part on joint work with Aviv Hover. No prior knowledge of coding bounds will be assumed.",
       "allDay": false
     },
     {
